@@ -12,8 +12,10 @@ const ANALYZER = path.join(ROOT, "backend", "analyze_contract.py");
 const PORT = Number(process.env.PORT || 4173);
 const MAX_UPLOAD_BYTES = 80 * 1024 * 1024;
 const ANALYZE_TIMEOUT_MS = 300 * 1000;
+const localVenvPython = path.join(ROOT, ".venv", "bin", "python");
 const PYTHON =
   process.env.CONTRACTGUARD_PYTHON ||
+  (fs.existsSync(localVenvPython) ? localVenvPython : null) ||
   "/Users/huynhquochuy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3";
 
 const MIME_TYPES = {
@@ -134,6 +136,7 @@ function parseMultipart(buffer, boundary) {
 function analyzeFile(filePath, filename, contractType = "") {
   return new Promise((resolve, reject) => {
     let settled = false;
+    console.log(`\n[INFO] Khởi chạy tiến trình Python để phân tích tệp: ${filename} (Loại: ${contractType})`);
     const child = spawn(PYTHON, [
       ANALYZER,
       "--input",
@@ -147,6 +150,7 @@ function analyzeFile(filePath, filename, contractType = "") {
       if (settled) return;
       settled = true;
       child.kill("SIGKILL");
+      console.error(`[TIMEOUT] Tiến trình phân tích ${filename} vượt quá giới hạn 300 giây.`);
       reject(new Error("Phân tích quá 300 giây. Hãy thử PDF scan rõ hơn, giảm số trang hoặc chia file thành từng phần nhỏ hơn."));
     }, ANALYZE_TIMEOUT_MS);
 
@@ -156,12 +160,21 @@ function analyzeFile(filePath, filename, contractType = "") {
       stdout += chunk.toString("utf8");
     });
     child.stderr.on("data", (chunk) => {
-      stderr += chunk.toString("utf8");
+      const text = chunk.toString("utf8");
+      stderr += text;
+      // In log thời gian thực từ Python ra Node.js console
+      const lines = text.split("\n");
+      for (const line of lines) {
+        if (line.trim()) {
+          console.log(`  [PYTHON] ${line.trim()}`);
+        }
+      }
     });
     child.on("error", (error) => {
       if (settled) return;
       settled = true;
       clearTimeout(timeout);
+      console.error(`[ERROR] Lỗi khởi chạy tiến trình Python:`, error);
       reject(error);
     });
     child.on("close", (code) => {
@@ -169,12 +182,15 @@ function analyzeFile(filePath, filename, contractType = "") {
       settled = true;
       clearTimeout(timeout);
       if (code !== 0) {
+        console.error(`[ERROR] Tiến trình Python thoát với mã lỗi ${code}`);
         reject(new Error((stderr || `Analyzer exited with code ${code}`).trim()));
         return;
       }
       try {
+        console.log(`[INFO] Hoàn thành phân tích thành công tệp: ${filename}`);
         resolve(JSON.parse(stdout));
       } catch (error) {
+        console.error(`[ERROR] Lỗi phân giải JSON kết quả:`, error.message);
         reject(new Error(`Không đọc được JSON từ analyzer: ${error.message}`));
       }
     });
@@ -182,10 +198,10 @@ function analyzeFile(filePath, filename, contractType = "") {
 }
 
 async function handleAnalyze(req, res) {
+  let filePath = SAMPLE_FILE;
   try {
     const contentType = req.headers["content-type"] || "";
     const buffer = await readBody(req);
-    let filePath = SAMPLE_FILE;
     let filename = "sample-rental-contract.txt";
     let contractType = "Hợp đồng thuê nhà";
 
@@ -218,6 +234,16 @@ async function handleAnalyze(req, res) {
       error: "Không thể phân tích hợp đồng",
       detail: error.message,
     });
+  } finally {
+    if (filePath !== SAMPLE_FILE) {
+      try {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+        }
+      } catch (err) {
+        console.error(`Không thể xóa file tạm ${filePath}:`, err);
+      }
+    }
   }
 }
 

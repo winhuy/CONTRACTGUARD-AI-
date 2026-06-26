@@ -403,8 +403,13 @@ function findingForParagraph(paragraph) {
 }
 
 function renderParagraph(paragraph, index) {
+  const isPageIndicator = /^\[Trang \d+(?:\s*-\s*OCR)?\]/i.test(paragraph);
+  if (isPageIndicator) {
+    return `<div class="doc-page-indicator">${escapeHtml(paragraph)}</div>`;
+  }
+
   const finding = findingForParagraph(paragraph);
-  const centerish = index < 8 || /^HỢP ĐỒNG|^CỘNG HÒA|^Độc lập/i.test(paragraph);
+  const centerish = /^(?:HỢP ĐỒNG|CỘNG HÒA|ĐỘC LẬP|ĐỀ NGHỊ|THỎA THUẬN|BIÊN BẢN|CAM KẾT|QUYẾT ĐỊNH|BẢN CAM KẾT|GIẤY)/i.test(paragraph.trim());
 
   if (!finding) {
     return `<p class="doc-paragraph${centerish ? " centerish" : ""}">${escapeHtml(paragraph)}</p>`;

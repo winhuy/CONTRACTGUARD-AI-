@@ -24,8 +24,16 @@ Các bên lựa chọn Tòa án nhân dân có thẩm quyền tại thành phố
 def make_page(path: Path, page_number: int) -> None:
     image = Image.new("RGB", (1654, 2339), "white")
     draw = ImageDraw.Draw(image)
-    title_font = ImageFont.truetype(FONT_PATH, 54)
-    body_font = ImageFont.truetype(FONT_PATH, 40)
+    try:
+        title_font = ImageFont.truetype("DejaVuSans.ttf", 54)
+        body_font = ImageFont.truetype("DejaVuSans.ttf", 40)
+    except IOError:
+        try:
+            title_font = ImageFont.truetype("LiberationSans-Regular.ttf", 54)
+            body_font = ImageFont.truetype("LiberationSans-Regular.ttf", 40)
+        except IOError:
+            title_font = ImageFont.load_default()
+            body_font = ImageFont.load_default()
     y = 160
     draw.text((140, y), f"Trang scan OCR {page_number}", fill="black", font=title_font)
     y += 110
