@@ -1,0 +1,31 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+node_modules/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+.venv
+venv
+env
+ENV
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Project-specific temporary and output files
+work/uploads/
+work/extracted_docs/
+work/*.json
+work/*.png
+work/*.pdf
+
+# Build and packaged distributions
+outputs/
