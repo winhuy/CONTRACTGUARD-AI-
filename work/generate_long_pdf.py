@@ -14,7 +14,6 @@ FONT_PATH = "/System/Library/Fonts/Supplemental/Arial.ttf"
 
 
 def main() -> None:
-    pdfmetrics.registerFont(TTFont("Arial", FONT_PATH))
     source_text = SOURCE.read_text(encoding="utf-8")
     lines = []
     for paragraph in source_text.splitlines():
@@ -28,10 +27,10 @@ def main() -> None:
     line_height = 13
 
     cursor = 0
-    for page in range(1, 41):
-        doc.setFont("Arial", 10)
+    for page in range(1, 3):
+        doc.setFont("Helvetica", 10)
         y = height - 46
-        doc.drawString(44, y, f"ContractGuard AI PDF extraction test - Trang {page}/40")
+        doc.drawString(44, y, f"ContractGuard AI PDF extraction test - Trang {page}/2")
         y -= 24
         for _ in range(52):
             text = lines[cursor % len(lines)]
