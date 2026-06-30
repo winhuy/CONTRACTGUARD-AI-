@@ -1259,6 +1259,10 @@ button:disabled:hover {
   font-size: 12px;
 }
 
+.compact-meta {
+  margin-top: 8px;
+}
+
 .suggestion-box {
   margin-top: 12px;
   padding: 10px;
@@ -1273,6 +1277,72 @@ button:disabled:hover {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.rewrite-box {
+  background: #fff8ea;
+  border-color: #ecd6a1;
+}
+
+.legal-links {
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #dce8e2;
+  border-radius: 7px;
+  background: #fbfffd;
+  display: grid;
+  gap: 8px;
+}
+
+.legal-links strong {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.legal-links > span {
+  color: #53615d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.legal-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.legal-link {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 9px;
+  border: 1px solid #cbded7;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #123f3a;
+  font-size: 12px;
+  font-weight: 850;
+  text-decoration: none;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.legal-link::after {
+  content: "TVPL";
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: #eef5f2;
+  color: #5a6a66;
+  font-size: 9px;
+  font-weight: 850;
+}
+
+.legal-link:hover {
+  border-color: #86b0a4;
+  box-shadow: 0 6px 16px rgba(18, 63, 58, 0.1);
+  transform: translateY(-1px);
 }
 
 .card-actions {

@@ -15,6 +15,7 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 from xml.etree import ElementTree as ET
 
 
@@ -96,6 +97,286 @@ CHECKLIST = [
     "Ngôn ngữ dễ hiểu cho người ký",
 ]
 
+TVPL_DOCUMENTS = {
+    "civil_code_2015": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "commercial_law_2005": "https://thuvienphapluat.vn/van-ban/Thuong-mai/Luat-Thuong-mai-2005-36-2005-QH11-2633.aspx",
+    "civil_procedure_2015": "https://thuvienphapluat.vn/van-ban/Thu-tuc-To-tung/Bo-luat-to-tung-dan-su-2015-296861.aspx",
+    "personal_data_decree_2023": "https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Nghi-dinh-13-2023-ND-CP-bao-ve-du-lieu-ca-nhan-562497.aspx",
+}
+
+
+def tvpl_article_url(document_key: str, heading: str) -> str:
+    return f"{TVPL_DOCUMENTS[document_key]}#:~:text={quote(heading, safe='')}"
+
+
+LEGAL_REFERENCE_CATALOG = {
+    "civil_3": {
+        "label": "Điều 3 BLDS 2015",
+        "title": "Các nguyên tắc cơ bản của pháp luật dân sự",
+        "url": tvpl_article_url("civil_code_2015", "Điều 3. Các nguyên tắc cơ bản của pháp luật dân sự"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_117": {
+        "label": "Điều 117 BLDS 2015",
+        "title": "Điều kiện có hiệu lực của giao dịch dân sự",
+        "url": tvpl_article_url("civil_code_2015", "Điều 117. Điều kiện có hiệu lực của giao dịch dân sự"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_119": {
+        "label": "Điều 119 BLDS 2015",
+        "title": "Hình thức giao dịch dân sự",
+        "url": tvpl_article_url("civil_code_2015", "Điều 119. Hình thức giao dịch dân sự"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_278": {
+        "label": "Điều 278 BLDS 2015",
+        "title": "Thời hạn thực hiện nghĩa vụ",
+        "url": tvpl_article_url("civil_code_2015", "Điều 278. Thời hạn thực hiện nghĩa vụ"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_328": {
+        "label": "Điều 328 BLDS 2015",
+        "title": "Đặt cọc",
+        "url": tvpl_article_url("civil_code_2015", "Điều 328. Đặt cọc"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_357": {
+        "label": "Điều 357 BLDS 2015",
+        "title": "Trách nhiệm do chậm thực hiện nghĩa vụ trả tiền",
+        "url": tvpl_article_url("civil_code_2015", "Điều 357. Trách nhiệm do chậm thực hiện nghĩa vụ trả tiền"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_398": {
+        "label": "Điều 398 BLDS 2015",
+        "title": "Nội dung của hợp đồng",
+        "url": tvpl_article_url("civil_code_2015", "Điều 398. Nội dung của hợp đồng"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_403": {
+        "label": "Điều 403 BLDS 2015",
+        "title": "Phụ lục hợp đồng",
+        "url": tvpl_article_url("civil_code_2015", "Điều 403. Phụ lục hợp đồng"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_418": {
+        "label": "Điều 418 BLDS 2015",
+        "title": "Thỏa thuận phạt vi phạm",
+        "url": tvpl_article_url("civil_code_2015", "Điều 418. Thỏa thuận phạt vi phạm"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_419": {
+        "label": "Điều 419 BLDS 2015",
+        "title": "Thiệt hại được bồi thường do vi phạm hợp đồng",
+        "url": tvpl_article_url("civil_code_2015", "Điều 419. Thiệt hại được bồi thường do vi phạm hợp đồng"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_428": {
+        "label": "Điều 428 BLDS 2015",
+        "title": "Đơn phương chấm dứt thực hiện hợp đồng",
+        "url": tvpl_article_url("civil_code_2015", "Điều 428. Đơn phương chấm dứt thực hiện hợp đồng"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_440": {
+        "label": "Điều 440 BLDS 2015",
+        "title": "Nghĩa vụ trả tiền",
+        "url": tvpl_article_url("civil_code_2015", "Điều 440. Nghĩa vụ trả tiền"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_468": {
+        "label": "Điều 468 BLDS 2015",
+        "title": "Lãi suất",
+        "url": tvpl_article_url("civil_code_2015", "Điều 468. Lãi suất"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_477": {
+        "label": "Điều 477 BLDS 2015",
+        "title": "Nghĩa vụ bảo đảm giá trị sử dụng của tài sản thuê",
+        "url": tvpl_article_url("civil_code_2015", "Điều 477. Nghĩa vụ bảo đảm giá trị sử dụng của tài sản thuê"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "commercial_300": {
+        "label": "Điều 300 LTM 2005",
+        "title": "Phạt vi phạm",
+        "url": tvpl_article_url("commercial_law_2005", "Điều 300. Phạt vi phạm"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "commercial_301": {
+        "label": "Điều 301 LTM 2005",
+        "title": "Mức phạt vi phạm",
+        "url": tvpl_article_url("commercial_law_2005", "Điều 301. Mức phạt vi phạm"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "civil_procedure_35": {
+        "label": "Điều 35 BLTTDS 2015",
+        "title": "Thẩm quyền của Tòa án nhân dân cấp huyện",
+        "url": tvpl_article_url("civil_procedure_2015", "Điều 35. Thẩm quyền của Tòa án nhân dân cấp huyện"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "nd13_3": {
+        "label": "Điều 3 NĐ 13/2023",
+        "title": "Giải thích từ ngữ về dữ liệu cá nhân",
+        "url": tvpl_article_url("personal_data_decree_2023", "Điều 3. Giải thích từ ngữ"),
+        "source": "Thư Viện Pháp Luật",
+    },
+    "nd13_9": {
+        "label": "Điều 9 NĐ 13/2023",
+        "title": "Quyền của chủ thể dữ liệu",
+        "url": tvpl_article_url("personal_data_decree_2023", "Điều 9. Quyền của chủ thể dữ liệu"),
+        "source": "Thư Viện Pháp Luật",
+    },
+}
+
+LEGAL_TOPIC_REFERENCE_KEYS = {
+    "Chủ thể hợp đồng": ["civil_117"],
+    "Tư cách pháp lý chủ thể": ["civil_117"],
+    "Người ký hợp đồng": ["civil_117"],
+    "Giấy ủy quyền": ["civil_117"],
+    "Ngành nghề kinh doanh": ["civil_117"],
+    "Đối tượng hợp đồng": ["civil_398"],
+    "Tính hợp pháp đối tượng": ["civil_117", "civil_398"],
+    "Số lượng / Khối lượng": ["civil_398"],
+    "Chất lượng / Tiêu chuẩn": ["civil_398"],
+    "Thời hạn thực hiện": ["civil_278", "civil_398"],
+    "Địa điểm thực hiện": ["civil_398"],
+    "Giá trị hợp đồng": ["civil_398", "civil_440"],
+    "Giá trị và thanh toán": ["civil_278", "civil_440"],
+    "Điều kiện thanh toán": ["civil_278", "civil_440"],
+    "Thời hạn thanh toán": ["civil_278", "civil_440"],
+    "Hồ sơ thanh toán": ["civil_398", "civil_440"],
+    "Chậm thanh toán": ["civil_357", "civil_468"],
+    "Quyền & nghĩa vụ": ["civil_3", "civil_398"],
+    "Nghĩa vụ phối hợp": ["civil_3", "civil_398"],
+    "Nghiệm thu / bàn giao": ["civil_398"],
+    "Mặc định nghiệm thu": ["civil_398"],
+    "Bàn giao và hồ sơ kèm theo": ["civil_398"],
+    "Phạt vi phạm": ["civil_418", "commercial_300", "commercial_301"],
+    "Phạt vi phạm và bồi thường": ["civil_418", "civil_419", "commercial_300", "commercial_301"],
+    "Giới hạn mức phạt thương mại": ["commercial_300", "commercial_301"],
+    "Bồi thường thiệt hại": ["civil_419"],
+    "Thiệt hại được bồi thường": ["civil_419"],
+    "Giới hạn trách nhiệm": ["civil_419"],
+    "Đặt cọc và hoàn cọc": ["civil_328"],
+    "Đơn phương chấm dứt": ["civil_428"],
+    "Gia hạn hợp đồng": ["civil_3", "civil_398"],
+    "Bất khả kháng": ["civil_3", "civil_398"],
+    "Bảo mật dữ liệu cá nhân": ["nd13_3", "nd13_9"],
+    "Tài sản kèm theo": ["civil_398", "civil_477"],
+    "Sửa chữa / bảo trì": ["civil_477"],
+    "Sửa chữa và bảo trì": ["civil_477"],
+    "Quyền kiểm tra tài sản": ["civil_3", "civil_398"],
+    "Chuyển nhượng / cho thuê lại": ["civil_398"],
+    "Thuế, phí, lệ phí": ["civil_398", "civil_440"],
+    "Thông báo vi phạm": ["civil_3", "civil_119"],
+    "Cơ quan giải quyết tranh chấp": ["civil_procedure_35"],
+    "Giải quyết tranh chấp": ["civil_procedure_35"],
+    "Hiệu lực và phụ lục": ["civil_119", "civil_403"],
+    "Hiệu lực và sửa đổi hợp đồng": ["civil_119", "civil_403"],
+    "Mâu thuẫn nội bộ điều khoản": ["civil_3", "civil_398"],
+    "Ngôn ngữ dễ hiểu cho người ký": ["civil_3"],
+}
+
+LEGAL_BASIS_REFERENCE_PATTERNS = [
+    (r"dieu\s+3\b", ["civil_3"]),
+    (r"dieu\s+117\b", ["civil_117"]),
+    (r"dieu\s+119\b", ["civil_119"]),
+    (r"dieu\s+278\b", ["civil_278"]),
+    (r"dieu\s+328\b", ["civil_328"]),
+    (r"dieu\s+357\b", ["civil_357"]),
+    (r"dieu\s+398\b", ["civil_398"]),
+    (r"dieu\s+403\b", ["civil_403"]),
+    (r"dieu\s+418\b", ["civil_418"]),
+    (r"dieu\s+419\b", ["civil_419"]),
+    (r"dieu\s+428\b", ["civil_428"]),
+    (r"dieu\s+440\b", ["civil_440"]),
+    (r"dieu\s+468\b", ["civil_468"]),
+    (r"dieu\s+477\b", ["civil_477"]),
+    (r"dieu\s+300(?:\s*-\s*302)?", ["commercial_300", "commercial_301"]),
+    (r"dieu\s+301\b", ["commercial_301"]),
+    (r"to tung dan su|blttds", ["civil_procedure_35"]),
+    (r"nghi dinh\s+13/2023|bao ve du lieu ca nhan", ["nd13_3", "nd13_9"]),
+]
+
+LEGAL_TOPIC_REFERENCE_PATTERNS = [
+    (r"chu the|tu cach|nguoi ky|uy quyen|tham quyen", ["civil_117"]),
+    (r"doi tuong|tai san kem theo|chat luong|tieu chuan|khoi luong|so luong", ["civil_117", "civil_398"]),
+    (r"gia tri|thanh toan|ho so thanh toan|thoi han thanh toan", ["civil_278", "civil_440"]),
+    (r"cham thanh toan|lai cham", ["civil_357", "civil_468"]),
+    (r"dat coc|hoan coc", ["civil_328"]),
+    (r"phat vi pham|boi thuong|thiet hai|gioi han trach nhiem", ["civil_418", "civil_419", "commercial_300", "commercial_301"]),
+    (r"don phuong|cham dut", ["civil_428"]),
+    (r"kiem tra", ["civil_3", "civil_398"]),
+    (r"ban giao|nghiem thu", ["civil_398"]),
+    (r"sua chua|bao tri", ["civil_477"]),
+    (r"gia han", ["civil_3", "civil_398"]),
+    (r"bao mat|du lieu ca nhan|rieng tu", ["nd13_3", "nd13_9"]),
+    (r"thong bao", ["civil_3", "civil_119"]),
+    (r"tranh chap|toa an|trong tai", ["civil_procedure_35"]),
+    (r"hieu luc|phu luc|sua doi", ["civil_119", "civil_403"]),
+]
+
+REWRITE_SUGGESTIONS_BY_TOPIC = {
+    "Chủ thể hợp đồng": "Bổ sung: 'Các bên cam kết thông tin nhân thân, thẩm quyền ký và giấy tờ cung cấp là đúng sự thật; bên cung cấp sai thông tin phải chịu trách nhiệm và bồi thường thiệt hại phát sinh.'",
+    "Tư cách pháp lý chủ thể": "Bổ sung: 'Mỗi bên phải cung cấp bản sao giấy tờ pháp lý còn hiệu lực và chịu trách nhiệm nếu người ký không có đủ thẩm quyền.'",
+    "Người ký hợp đồng": "Bổ sung: 'Người ký cam kết có đầy đủ thẩm quyền đại diện; nếu ký theo ủy quyền thì giấy ủy quyền là phụ lục không tách rời của hợp đồng.'",
+    "Giấy ủy quyền": "Bổ sung: 'Trường hợp ký theo ủy quyền, bên ký phải cung cấp giấy ủy quyền hợp lệ trước ngày ký hợp đồng.'",
+    "Ngành nghề kinh doanh": "Bổ sung: 'Bên cung cấp dịch vụ cam kết có đủ điều kiện pháp lý, giấy phép và ngành nghề phù hợp để thực hiện hợp đồng.'",
+    "Đối tượng hợp đồng": "Bổ sung phụ lục mô tả đối tượng hợp đồng gồm địa chỉ, diện tích, hiện trạng, tài sản kèm theo và ảnh chụp tại ngày bàn giao.",
+    "Tính hợp pháp đối tượng": "Bổ sung: 'Bên giao tài sản/công việc cam kết đối tượng hợp đồng hợp pháp, không bị tranh chấp, kê biên hoặc hạn chế giao dịch tại thời điểm ký.'",
+    "Số lượng / Khối lượng": "Bổ sung bảng khối lượng hoặc danh mục tài sản kèm tiêu chí nghiệm thu, đơn vị tính và cách xử lý khi có sai lệch.",
+    "Chất lượng / Tiêu chuẩn": "Bổ sung tiêu chuẩn chất lượng, tình trạng ban đầu và phương pháp kiểm tra để làm căn cứ nghiệm thu hoặc yêu cầu sửa chữa.",
+    "Thời hạn thực hiện": "Sửa thành: 'Mỗi nghĩa vụ có ngày bắt đầu, hạn hoàn thành và thời gian gia hạn tối đa nếu có sự kiện bất khả kháng hoặc lỗi của bên còn lại.'",
+    "Địa điểm thực hiện": "Bổ sung địa điểm thực hiện, địa điểm giao nhận hồ sơ và người đầu mối xác nhận hoàn thành nghĩa vụ.",
+    "Giá trị hợp đồng": "Sửa thành: 'Giá trị hợp đồng đã bao gồm/không bao gồm thuế, phí, chi phí phát sinh và chỉ được điều chỉnh bằng phụ lục có chữ ký hai bên.'",
+    "Giá trị và thanh toán": "Sửa thành: 'Bên thanh toán chuyển khoản vào tài khoản đã đăng ký, nội dung chuyển khoản ghi rõ kỳ thanh toán và chứng từ thanh toán là căn cứ xác nhận đã trả tiền.'",
+    "Điều kiện thanh toán": "Bổ sung điều kiện thanh toán, bộ hồ sơ cần nộp và thời hạn kiểm tra hồ sơ trước khi phát sinh nghĩa vụ trả tiền.",
+    "Thời hạn thanh toán": "Sửa thành: 'Khoản thanh toán đến hạn vào ngày cụ thể; nếu ngày đó rơi vào ngày nghỉ thì hạn thanh toán là ngày làm việc kế tiếp.'",
+    "Hồ sơ thanh toán": "Bổ sung danh mục hồ sơ thanh toán gồm hóa đơn, biên bản nghiệm thu/bàn giao, đề nghị thanh toán và thông tin tài khoản nhận tiền.",
+    "Chậm thanh toán": "Sửa thành: 'Lãi chậm trả không vượt quá mức tối đa theo pháp luật hiện hành và chỉ tính trên số tiền chậm trả thực tế trong thời gian chậm trả.'",
+    "Quyền & nghĩa vụ": "Bổ sung bảng quyền và nghĩa vụ riêng cho từng bên, nêu rõ việc phải làm, hạn thực hiện và hậu quả nếu không thực hiện.",
+    "Nghĩa vụ phối hợp": "Bổ sung: 'Mỗi bên phải phản hồi yêu cầu phối hợp trong vòng 02 ngày làm việc; quá hạn phản hồi được xem là chậm phối hợp.'",
+    "Nghiệm thu / bàn giao": "Bổ sung biên bản bàn giao/nghiệm thu có danh mục tài sản, tình trạng, ảnh chụp và chữ ký của người đại diện hai bên.",
+    "Mặc định nghiệm thu": "Sửa thành: 'Chỉ được xem là nghiệm thu mặc định nếu bên nhận đã được cung cấp đầy đủ hồ sơ và không phản hồi trong thời hạn đã thỏa thuận.'",
+    "Bàn giao và hồ sơ kèm theo": "Bổ sung: 'Biên bản bàn giao ghi rõ tình trạng từng hạng mục, chỉ số điện/nước, tài sản kèm theo và ảnh chụp có ngày giờ.'",
+    "Phạt vi phạm": "Sửa thành: 'Mức phạt áp dụng riêng cho từng hành vi vi phạm, không vượt quá giới hạn pháp luật và không thay thế nghĩa vụ chứng minh thiệt hại thực tế.'",
+    "Phạt vi phạm và bồi thường": "Sửa thành: 'Phạt vi phạm và bồi thường thiệt hại là hai chế tài riêng; bồi thường chỉ áp dụng với thiệt hại thực tế, trực tiếp, hợp lý và có chứng từ.'",
+    "Giới hạn mức phạt thương mại": "Sửa thành: 'Nếu là giao dịch thương mại, tổng mức phạt vi phạm không vượt quá giới hạn pháp luật áp dụng tại thời điểm ký.'",
+    "Bồi thường thiệt hại": "Bổ sung: 'Bên yêu cầu bồi thường phải chứng minh thiệt hại thực tế, mức thiệt hại, quan hệ nhân quả và đã áp dụng biện pháp hạn chế tổn thất hợp lý.'",
+    "Thiệt hại được bồi thường": "Bổ sung danh mục thiệt hại được bồi thường, loại trừ thiệt hại gián tiếp nếu hai bên không muốn mở rộng trách nhiệm.",
+    "Giới hạn trách nhiệm": "Bổ sung trần trách nhiệm tối đa và các ngoại lệ không áp dụng trần như gian dối, cố ý vi phạm hoặc xâm phạm dữ liệu cá nhân.",
+    "Đặt cọc và hoàn cọc": "Sửa thành: 'Bên cho thuê hoàn trả tiền đặt cọc trong vòng 03 ngày làm việc kể từ ngày nhận lại tài sản và ký biên bản thanh lý; mọi khoản khấu trừ phải có chứng từ hợp lệ.'",
+    "Đơn phương chấm dứt": "Sửa thành: 'Một bên chỉ được đơn phương chấm dứt sau khi gửi thông báo bằng văn bản, cho bên vi phạm ít nhất 03 ngày làm việc để khắc phục, trừ trường hợp vi phạm nghiêm trọng.'",
+    "Gia hạn hợp đồng": "Bổ sung: 'Bên nhận đề nghị gia hạn phải phản hồi trong vòng 05 ngày làm việc; nếu không phản hồi thì đề nghị không mặc nhiên được chấp thuận.'",
+    "Bất khả kháng": "Bổ sung: 'Bên bị ảnh hưởng phải thông báo trong vòng 03 ngày làm việc, cung cấp chứng cứ và tiếp tục thực hiện phần nghĩa vụ không bị ảnh hưởng.'",
+    "Bảo mật dữ liệu cá nhân": "Bổ sung: 'Các bên chỉ thu thập, lưu giữ và sử dụng dữ liệu cá nhân cho mục đích thực hiện hợp đồng; không chia sẻ cho bên thứ ba nếu chưa có căn cứ pháp lý hoặc sự đồng ý phù hợp.'",
+    "Tài sản kèm theo": "Bổ sung phụ lục tài sản kèm theo, ghi rõ số lượng, tình trạng, giá trị ước tính và trách nhiệm bồi hoàn khi mất hoặc hư hỏng.",
+    "Sửa chữa / bảo trì": "Sửa thành: 'Bên cho thuê phản hồi yêu cầu sửa chữa trong vòng 24 giờ đối với sự cố an toàn và 03 ngày làm việc đối với hư hỏng thông thường.'",
+    "Sửa chữa và bảo trì": "Sửa thành: 'Bên cho thuê phản hồi yêu cầu sửa chữa trong vòng 24 giờ đối với sự cố an toàn và 03 ngày làm việc đối với hư hỏng thông thường.'",
+    "Quyền kiểm tra tài sản": "Sửa thành: 'Bên cho thuê chỉ được kiểm tra trong khung giờ hợp lý, báo trước ít nhất 24 giờ, trừ trường hợp khẩn cấp như cháy nổ, rò rỉ nước hoặc nguy cơ thiệt hại ngay lập tức.'",
+    "Chuyển nhượng / cho thuê lại": "Bổ sung điều kiện chuyển nhượng hoặc cho thuê lại, quy trình xin chấp thuận bằng văn bản và trách nhiệm của bên chuyển giao.",
+    "Thuế, phí, lệ phí": "Bổ sung: 'Mỗi loại thuế, phí, lệ phí được liệt kê rõ bên chịu trách nhiệm, thời điểm thanh toán và chứng từ phải cung cấp.'",
+    "Thông báo vi phạm": "Sửa thành: 'Mọi thông báo vi phạm phải gửi bằng văn bản qua địa chỉ/email đã đăng ký và được xem là nhận khi có xác nhận gửi thành công hoặc biên nhận giao nhận.'",
+    "Cơ quan giải quyết tranh chấp": "Bổ sung bước thương lượng trong 07 ngày làm việc trước khi khởi kiện, trừ trường hợp cần áp dụng biện pháp khẩn cấp tạm thời.",
+    "Giải quyết tranh chấp": "Bổ sung bước thương lượng trong 07 ngày làm việc trước khi khởi kiện, trừ trường hợp cần áp dụng biện pháp khẩn cấp tạm thời.",
+    "Hiệu lực và phụ lục": "Bổ sung: 'Mọi phụ lục, sửa đổi, gia hạn chỉ có hiệu lực khi lập bằng văn bản và có chữ ký hợp lệ của cả hai bên.'",
+    "Hiệu lực và sửa đổi hợp đồng": "Bổ sung: 'Mọi phụ lục, sửa đổi, gia hạn chỉ có hiệu lực khi lập bằng văn bản và có chữ ký hợp lệ của cả hai bên.'",
+    "Mâu thuẫn nội bộ điều khoản": "Bổ sung nguyên tắc ưu tiên áp dụng khi điều khoản mâu thuẫn, ví dụ phụ lục mới nhất được ưu tiên nếu được hai bên ký hợp lệ.",
+    "Ngôn ngữ dễ hiểu cho người ký": "Bổ sung bản tóm tắt nghĩa vụ chính, khoản tiền phải trả, mốc thời gian và quyền chấm dứt bằng ngôn ngữ dễ hiểu trước khi ký.",
+}
+
+REWRITE_SUGGESTION_PATTERNS = [
+    (r"dat coc|hoan coc", REWRITE_SUGGESTIONS_BY_TOPIC["Đặt cọc và hoàn cọc"]),
+    (r"cham thanh toan|lai", REWRITE_SUGGESTIONS_BY_TOPIC["Chậm thanh toán"]),
+    (r"phat vi pham|boi thuong", REWRITE_SUGGESTIONS_BY_TOPIC["Phạt vi phạm và bồi thường"]),
+    (r"don phuong|cham dut", REWRITE_SUGGESTIONS_BY_TOPIC["Đơn phương chấm dứt"]),
+    (r"kiem tra", REWRITE_SUGGESTIONS_BY_TOPIC["Quyền kiểm tra tài sản"]),
+    (r"bao mat|du lieu ca nhan|rieng tu", REWRITE_SUGGESTIONS_BY_TOPIC["Bảo mật dữ liệu cá nhân"]),
+    (r"tranh chap|toa an|trong tai", REWRITE_SUGGESTIONS_BY_TOPIC["Giải quyết tranh chấp"]),
+    (r"ban giao|nghiem thu", REWRITE_SUGGESTIONS_BY_TOPIC["Bàn giao và hồ sơ kèm theo"]),
+    (r"sua chua|bao tri", REWRITE_SUGGESTIONS_BY_TOPIC["Sửa chữa và bảo trì"]),
+    (r"gia han", REWRITE_SUGGESTIONS_BY_TOPIC["Gia hạn hợp đồng"]),
+    (r"thong bao", REWRITE_SUGGESTIONS_BY_TOPIC["Thông báo vi phạm"]),
+]
+
 
 def compact(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
@@ -105,6 +386,70 @@ def fold_vietnamese(value: str) -> str:
     normalized = unicodedata.normalize("NFD", value)
     stripped = "".join(char for char in normalized if unicodedata.category(char) != "Mn")
     return stripped.replace("đ", "d").replace("Đ", "D").lower()
+
+
+def unique_legal_reference_keys(keys: list[str]) -> list[str]:
+    seen: set[str] = set()
+    unique: list[str] = []
+    for key in keys:
+        if key in LEGAL_REFERENCE_CATALOG and key not in seen:
+            seen.add(key)
+            unique.append(key)
+    return unique
+
+
+def legal_references_for_finding(finding: dict[str, Any]) -> list[dict[str, str]]:
+    topic = compact(str(finding.get("muc_ra_soat", "")))
+    basis = compact(str(finding.get("co_so_phap_ly", "")))
+    keys: list[str] = []
+
+    keys.extend(LEGAL_TOPIC_REFERENCE_KEYS.get(topic, []))
+    searchable = fold_vietnamese(f"{topic} {basis}")
+    folded_topic = fold_vietnamese(topic)
+    for pattern, pattern_keys in LEGAL_TOPIC_REFERENCE_PATTERNS:
+        if re.search(pattern, folded_topic):
+            keys.extend(pattern_keys)
+
+    for pattern, pattern_keys in LEGAL_BASIS_REFERENCE_PATTERNS:
+        if re.search(pattern, searchable):
+            keys.extend(pattern_keys)
+
+    unique_keys = unique_legal_reference_keys(keys)
+    if not unique_keys and basis and "khuyen nghi van hanh" not in fold_vietnamese(basis):
+        unique_keys = ["civil_3"]
+    if not unique_keys:
+        unique_keys = ["civil_3"]
+
+    return [dict(LEGAL_REFERENCE_CATALOG[key]) for key in unique_keys[:4]]
+
+
+def rewrite_suggestion_for_finding(finding: dict[str, Any]) -> str:
+    topic = compact(str(finding.get("muc_ra_soat", "")))
+    if topic in REWRITE_SUGGESTIONS_BY_TOPIC:
+        return REWRITE_SUGGESTIONS_BY_TOPIC[topic]
+
+    searchable = fold_vietnamese(f"{topic} {finding.get('giai_thich_binh_dan', '')} {finding.get('co_so_phap_ly', '')}")
+    for pattern, suggestion in REWRITE_SUGGESTION_PATTERNS:
+        if re.search(pattern, searchable):
+            return suggestion
+
+    suggestion = compact(str(finding.get("goi_y_dam_phan", "")))
+    if suggestion:
+        return suggestion
+    return "Bổ sung một câu sửa cụ thể nêu rõ nghĩa vụ, thời hạn thực hiện, chứng từ chứng minh và hậu quả pháp lý nếu không thực hiện đúng."
+
+
+def enrich_findings_for_report(findings: list[dict[str, Any]]) -> None:
+    for finding in findings:
+        if not isinstance(finding, dict):
+            continue
+
+        existing_refs = finding.get("legalReferences")
+        if not isinstance(existing_refs, list) or not any(isinstance(ref, dict) and ref.get("url") for ref in existing_refs):
+            finding["legalReferences"] = legal_references_for_finding(finding)
+
+        if not compact(str(finding.get("cau_sua_bo_sung", ""))):
+            finding["cau_sua_bo_sung"] = rewrite_suggestion_for_finding(finding)
 
 
 def text_from_docx_node(node: ET.Element) -> str:
@@ -1019,7 +1364,7 @@ Hãy phân tích hợp đồng dưới đây (loại hợp đồng: {contract_ty
 {checklist_desc}
 
 Yêu cầu cụ thể:
-1. Phát hiện các rủi ro (RED - Rủi ro cao cần sửa, YELLOW - Điểm mơ hồ cần thương lượng) hoặc các điểm an toàn (GREEN - Điểm có lợi/an toàn cho người ký).
+1. Phân tích các rủi ro (RED - Rủi ro cao cần sửa, YELLOW - Điểm mơ hồ cần thương lượng) hoặc các điểm an toàn (GREEN - Điểm có lợi/an toàn cho người ký).
 2. Hãy cố gắng tìm từ 5 đến 12 điểm rà soát quan trọng nhất.
 3. Cho mỗi điểm rà soát, trích xuất chính xác 100% câu chữ gốc của điều khoản từ văn bản hợp đồng vào trường "van_ban_goc_highlight". KHÔNG được sửa đổi hay chế tác câu gốc này, vì hệ thống cần so khớp chính xác để highlight trên giao diện. Nếu điểm rà soát đó là do "Hợp đồng thiếu điều khoản quan trọng" (ví dụ thiếu hạn hoàn cọc), bạn có thể để "van_ban_goc_highlight" là "".
 4. Phân tích chi tiết "deepAnalysis" gồm:
@@ -1032,6 +1377,11 @@ Yêu cầu cụ thể:
    - "timeline": 1-5 mốc thời gian/nghĩa vụ quan trọng trong hợp đồng. Mỗi mốc gồm: "label" (nhãn), "value" (nội dung thời điểm), "risk" (lời khuyên rủi ro ngắn gọn).
    - "missingClauses": 1-5 điều khoản quan trọng bị thiếu trong hợp đồng mà người ký nên yêu cầu bổ sung để tự bảo vệ mình. Mỗi điều khoản gồm: "title" (tên điều khoản), "advice" (lời khuyên ngắn).
    - "priorityActions": 1-4 hành động khẩn cấp ưu tiên sửa (mức độ RED hoặc YELLOW). Mỗi hành động gồm: "title" (tên hành động), "severity" ("RED" hoặc "YELLOW"), "why" (lý do tại sao khẩn cấp), "action" (đề xuất hành động sửa cụ thể).
+5. ĐẶC BIỆT LƯU Ý khi đánh giá điều khoản "Đặt cọc và hoàn cọc":
+   - Hãy đọc kỹ toàn bộ hợp đồng. Nếu hợp đồng đã ghi nhận tiền cọc sẽ được hoàn trả khi kết thúc hoặc thanh lý hợp đồng (ví dụ: "Tiền đặt cọc được hoàn trả khi kết thúc hợp đồng sau khi trừ các khoản..."), bạn KHÔNG ĐƯỢC kết luận là "Hợp đồng chưa quy định thời gian hoàn trả tiền đặt cọc".
+   - Thay vào đó, hãy ghi nhận đúng thực tế và giải thích chính xác: Hợp đồng đã quy định hoàn trả tiền cọc khi kết thúc hợp đồng, nhưng chưa quy định cụ thể thời hạn bằng số ngày làm việc (ví dụ: hoàn trả trong vòng 3 ngày hay 5 ngày sau khi bàn giao bàn giao lại nhà).
+   - Gán mức độ rủi ro là "YELLOW" (cần đàm phán thêm để làm rõ số ngày), trích dẫn toàn bộ câu thỏa thuận đặt cọc và hoàn cọc vào "van_ban_goc_highlight".
+6. Tuyệt đối KHÔNG sao chép máy móc các giá trị, số liệu hoặc từ ngữ của ví dụ JSON mẫu ở dưới vào kết quả phân tích thực tế trừ khi chúng hoàn toàn trùng khớp với hợp đồng thực tế. Ví dụ mẫu chỉ để minh họa cấu trúc dữ liệu JSON.
 
 Hãy trả về kết quả dưới dạng JSON duy nhất, khớp chính xác với cấu trúc JSON mẫu sau:
 {{
@@ -1040,34 +1390,34 @@ Hãy trả về kết quả dưới dạng JSON duy nhất, khớp chính xác v
       "stt": 1,
       "muc_ra_soat": "Đặt cọc và hoàn cọc",
       "muc_do_rui_ro": "YELLOW",
-      "van_ban_goc_highlight": "Bên thuê đặt cọc 17.000.000 đồng",
-      "giai_thich_binh_dan": "Hợp đồng chưa quy định thời gian hoàn trả tiền đặt cọc.",
-      "goi_y_dam_phan": "Đề nghị ghi rõ: hoàn trả tiền cọc trong vòng 03 ngày làm việc kể từ ngày trả nhà.",
+      "van_ban_goc_highlight": "Bên B đặt cọc cho Bên A số tiền 50.000.000 đồng để bảo đảm thực hiện hợp đồng.",
+      "giai_thich_binh_dan": "Hợp đồng đã có thỏa thuận đặt cọc nhưng chưa quy định thời gian tối đa để Bên A hoàn trả tiền cọc cho Bên B sau khi bàn giao lại mặt bằng.",
+      "goi_y_dam_phan": "Đề xuất quy định hạn hoàn cọc rõ ràng (ví dụ: trong vòng 05 ngày làm việc kể từ ngày bàn giao lại mặt bằng và ký biên bản thanh lý).",
       "co_so_phap_ly": "Điều 328 Bộ luật Dân sự 2015",
-      "ly_do_ra_soat": "Không có deadline hoàn cọc dễ dẫn tới tranh chấp, dây dưa khi trả nhà.",
-      "confidence": 0.9,
+      "ly_do_ra_soat": "Bên B có thể gặp khó khăn và bị giam tiền cọc lâu do không có thời hạn hoàn trả ràng buộc.",
+      "confidence": 0.85,
       "affected_party": "Bên thuê",
-      "next_step": "Yêu cầu bổ sung thời hạn hoàn trả cọc 3 ngày.",
-      "financial_exposure": "17.000.000 đồng"
+      "next_step": "Thương lượng bổ sung thời hạn hoàn cọc 5 ngày làm việc.",
+      "financial_exposure": "50.000.000 đồng"
     }}
   ],
   "deepAnalysis": {{
     "readiness": {{
       "label": "Có thể đàm phán thêm",
-      "score": 75,
+      "score": 80,
       "reason": "Cần làm rõ hạn hoàn trả đặt cọc và mức phạt chậm thanh toán."
     }},
     "financialExposure": {{
-      "monthlyRent": 8500000,
-      "deposit": 17000000,
-      "possiblePenalty": 8500000,
-      "estimatedExposure": 25500000
+      "monthlyRent": 25000000,
+      "deposit": 50000000,
+      "possiblePenalty": 25000000,
+      "estimatedExposure": 75000000
     }},
     "timeline": [
       {{
         "label": "Hạn trả tiền thuê",
-        "value": "Trước ngày 05 hằng tháng",
-        "risk": "Tránh chậm thanh toán quá 5 ngày để không bị tính lãi."
+        "value": "Trước ngày 10 hằng tháng",
+        "risk": "Nên giữ hóa đơn chứng từ mỗi lần thanh toán."
       }}
     ],
     "missingClauses": [
@@ -1081,7 +1431,7 @@ Hãy trả về kết quả dưới dạng JSON duy nhất, khớp chính xác v
         "title": "Bổ sung thời hạn hoàn cọc",
         "severity": "YELLOW",
         "why": "Thiếu thời hạn hoàn trả cọc làm bên thuê bị động khi kết thúc hợp đồng.",
-        "action": "Yêu cầu bổ sung điều khoản hoàn cọc trong 3 ngày làm việc."
+        "action": "Yêu cầu bổ sung điều khoản hoàn cọc trong 5 ngày làm việc."
       }}
     ]
   }}
@@ -1280,6 +1630,8 @@ def analyze_contract(text: str, filename: str, contract_type: str) -> dict[str, 
             overall = "HIGH" if counts["RED"] >= 2 or score < 55 else "MEDIUM" if counts["RED"] or counts["YELLOW"] >= 2 else "LOW"
             readiness["score"] = score
             readiness["label"] = "Cần sửa trước khi ký" if counts["RED"] else "Có thể đàm phán thêm" if counts["YELLOW"] else "Có thể xem xét ký"
+
+        enrich_findings_for_report(findings)
 
         return {
             "fileName": filename,
@@ -1615,6 +1967,7 @@ def analyze_contract(text: str, filename: str, contract_type: str) -> dict[str, 
     score = max(18, min(96, 92 - counts["RED"] * 18 - counts["YELLOW"] * 7 + counts["GREEN"] * 2))
     overall = "HIGH" if counts["RED"] >= 2 or score < 55 else "MEDIUM" if counts["RED"] or counts["YELLOW"] >= 2 else "LOW"
     deep_analysis = build_deep_analysis(text, findings, counts, score)
+    enrich_findings_for_report(findings)
 
     return {
         "fileName": filename,

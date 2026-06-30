@@ -394,6 +394,42 @@ function sortedFindings() {
   });
 }
 
+function findingRewriteText(finding) {
+  return compact(finding.cau_sua_bo_sung || finding.rewriteSuggestion || finding.goi_y_dam_phan || "");
+}
+
+function renderLegalReferences(finding) {
+  const references = Array.isArray(finding.legalReferences)
+    ? finding.legalReferences.filter((ref) => ref && ref.url && ref.label)
+    : [];
+
+  if (!references.length) {
+    return `
+      <div class="finding-meta">
+        <span>Cơ sở: ${escapeHtml(finding.co_so_phap_ly || "Đang cập nhật")}</span>
+        <span>Độ tin cậy: ${Math.round(finding.confidence * 100)}%</span>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="legal-links">
+      <strong>Căn cứ pháp lý</strong>
+      <div class="legal-link-list">
+        ${references.map((ref) => `
+          <a class="legal-link" href="${escapeHtml(ref.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(ref.title || ref.label)}">
+            ${escapeHtml(ref.label)}
+          </a>
+        `).join("")}
+      </div>
+      <span>${escapeHtml(finding.co_so_phap_ly || "Mở liên kết để xem điều luật cụ thể")}</span>
+    </div>
+    <div class="finding-meta compact-meta">
+      <span>Độ tin cậy: ${Math.round(finding.confidence * 100)}%</span>
+    </div>
+  `;
+}
+
 function findingForParagraph(paragraph) {
   const para = compact(paragraph);
   return sortedFindings().find((finding) => {
@@ -464,6 +500,7 @@ function renderFindings() {
   selectors.findingsList.innerHTML = findings
     .map((finding) => {
       const level = severity[finding.muc_do_rui_ro];
+      const rewriteText = findingRewriteText(finding);
       return `
         <article class="finding-card ${finding.muc_do_rui_ro}" data-finding-id="${finding.id}">
           <div class="finding-head">
@@ -482,15 +519,16 @@ function renderFindings() {
             <strong>Câu đề xuất</strong>
             <span>${escapeHtml(finding.goi_y_dam_phan)}</span>
           </div>
-          <div class="finding-meta">
-            <span>Cơ sở: ${escapeHtml(finding.co_so_phap_ly)}</span>
-            <span>Độ tin cậy: ${Math.round(finding.confidence * 100)}%</span>
+          <div class="suggestion-box rewrite-box">
+            <strong>Câu sửa bổ sung</strong>
+            <span>${escapeHtml(rewriteText)}</span>
           </div>
+          ${renderLegalReferences(finding)}
           <div class="card-actions">
             <button class="mini-btn jump-btn" type="button" data-finding-id="${finding.id}" ${
         finding.van_ban_goc_highlight ? "" : "disabled"
       }>Tới đoạn gốc</button>
-            <button class="mini-btn copy-btn" type="button" data-copy="${escapeHtml(finding.goi_y_dam_phan)}">Copy câu sửa</button>
+            <button class="mini-btn copy-btn" type="button" data-copy="${escapeHtml(rewriteText)}">Copy câu sửa</button>
           </div>
         </article>
       `;

@@ -1,249 +1,277 @@
 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+
 Độc lập - Tự do - Hạnh phúc
+
 ________________________
 
 Thành phố Huế, ngày 25 tháng 6 năm 2026
 
 HỢP ĐỒNG THUÊ NHÀ Ở
 
-Số 06/2026/HĐTN
+Số: 06/2026/HĐTN-DEMO
+
+BẢN MÔ PHỎNG PHỤC VỤ KIỂM THỬ PHẦN MỀM - KHÔNG SỬ DỤNG CHO GIAO DỊCH THẬT
 
 Căn cứ Bộ luật Dân sự ngày 24 tháng 11 năm 2015;
 
 Căn cứ Luật Kinh doanh bất động sản ngày 28 tháng 11 năm 2023;
 
-Căn cứ Nghị định số 96/2024/NĐ-CP ngày 24 tháng 7 năm 2024 của Chính phủ quy định chi tiết một số điều của Luật Kinh doanh bất động sản;
-
 Căn cứ Luật Nhà ở ngày 27 tháng 11 năm 2023;
 
-Căn cứ Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất số CX 123456, số vào sổ cấp GCN: CS 01234 do Sở Tài nguyên và Môi trường tỉnh Thừa Thiên Huế cấp ngày 15/3/2021.
+Căn cứ Nghị định số 96/2024/NĐ-CP ngày 24 tháng 7 năm 2024 của Chính phủ quy định chi tiết một số điều của Luật Kinh doanh bất động sản;
 
-Hai bên chúng tôi gồm:
+Căn cứ Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính phủ về bảo vệ dữ liệu cá nhân;
 
-I. BÊN CHO THUÊ NHÀ Ở (sau đây gọi tắt là Bên cho thuê):
+Căn cứ Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất số CX 123456, số vào sổ cấp GCN: CS 01234 do Sở Tài nguyên và Môi trường tỉnh Thừa Thiên Huế cấp ngày 15/3/2021;
 
-- Tên cá nhân: Nguyễn Văn Minh
+Căn cứ nhu cầu thuê nhà ở của Bên thuê và khả năng cho thuê nhà ở của Bên cho thuê.
 
-- Giấy chứng nhận đăng ký doanh nghiệp/Giấy chứng nhận đăng ký đầu tư số: Không áp dụng (Bên cho thuê là cá nhân).
+Hôm nay, tại Thành phố Huế, chúng tôi gồm có:
 
-- Người đại diện theo pháp luật: Không áp dụng. Chức vụ: Không áp dụng.
+I. BÊN CHO THUÊ NHÀ Ở (sau đây gọi là “Bên cho thuê”):
 
-- Thẻ căn cước công dân số: 046078001234, cấp ngày 12/05/2022, tại Cục Cảnh sát quản lý hành chính về trật tự xã hội.
+- Họ và tên: Nguyễn Văn Minh
 
-- Địa chỉ: Số 25 đường Nguyễn Huệ, phường Phú Nhuận, thành phố Huế, Việt Nam.
+- Ngày sinh: 01/01/1978
 
-- Điện thoại liên hệ: 0905 123 456. Fax: Không có.
+- CCCD số: 046078001234, cấp ngày 12/05/2022 tại Cục Cảnh sát quản lý hành chính về trật tự xã hội.
 
-- Số tài khoản: 1903 4567 8910 12. Tại Ngân hàng: Techcombank - Chi nhánh Huế.
+- Địa chỉ thường trú: Số 25 đường Nguyễn Huệ, phường Phú Nhuận, thành phố Huế, Việt Nam.
+
+- Điện thoại: 0905 123 456.
+
+- Số tài khoản nhận tiền thuê: 1903 4567 8910 12 tại Ngân hàng Techcombank - Chi nhánh Huế.
 
 - Mã số thuế: 3300123456.
 
-II. BÊN THUÊ NHÀ Ở (sau đây gọi tắt là Bên thuê):
+II. BÊN THUÊ NHÀ Ở (sau đây gọi là “Bên thuê”):
 
-- Tên cá nhân: Trần Thị Lan
+- Họ và tên: Trần Thị Lan
 
-- Thẻ căn cước công dân/hộ chiếu số: 046082009876, cấp ngày: 20/08/2023, tại Cục Cảnh sát quản lý hành chính về trật tự xã hội.
+- Ngày sinh: 20/08/1982
+
+- CCCD số: 046082009876, cấp ngày 20/08/2023 tại Cục Cảnh sát quản lý hành chính về trật tự xã hội.
 
 - Nơi đăng ký cư trú: Số 12 kiệt 45 đường Hùng Vương, phường Phú Hội, thành phố Huế, Việt Nam.
 
 - Địa chỉ liên hệ: Số 12 kiệt 45 đường Hùng Vương, phường Phú Hội, thành phố Huế, Việt Nam.
 
-- Điện thoại liên hệ: 0935 987 654. Fax (nếu có): Không có.
+- Điện thoại: 0935 987 654.
 
-- Số tài khoản (nếu có): 9704 1234 5678 9012. Tại Ngân hàng: Vietcombank - Chi nhánh Huế.
+- Số tài khoản: 9704 1234 5678 9012 tại Ngân hàng Vietcombank - Chi nhánh Huế.
 
 - Mã số thuế (nếu có): 3300654321.
 
-Hai bên chúng tôi thống nhất ký kết hợp đồng cho thuê nhà ở với các nội dung sau đây:
+Hai bên thống nhất ký kết Hợp đồng thuê nhà ở với các điều khoản sau:
 
-Điều 1. Các thông tin về nhà ở cho thuê
+Điều 1. Thông tin về nhà ở cho thuê
 
-1. Loại nhà ở: Nhà ở riêng lẻ.
-
-(Nhà ở: biệt thự, căn hộ chung cư, nhà ở riêng lẻ)
+1. Loại nhà ở: Nhà ở riêng lẻ, 02 tầng, có lối đi riêng, sân để xe và khu bếp độc lập.
 
 2. Vị trí, địa điểm nhà ở: Số 25 đường Nguyễn Huệ, phường Phú Nhuận, thành phố Huế, Việt Nam.
 
-(Nhà ở: nhà ở riêng lẻ)
+3. Hiện trạng về chất lượng nhà ở: Nhà xây dựng kiên cố, kết cấu bê tông cốt thép; hệ thống điện, nước, cửa, khóa, thiết bị vệ sinh đang hoạt động tại thời điểm bàn giao.
 
-(Đối với nhà ở riêng lẻ: nhà 02 tầng, mặt tiền đường Nguyễn Huệ, có lối đi riêng, có sân để xe và khu bếp độc lập.)
+4. Diện tích: tổng diện tích sàn xây dựng 120 m2; tổng diện tích sử dụng đất 80 m2, trong đó sử dụng riêng 80 m2, sử dụng chung 0 m2.
 
-3. Hiện trạng về chất lượng nhà ở: Nhà ở xây dựng kiên cố, kết cấu bê tông cốt thép, tường sơn nước, nền gạch men; hệ thống điện, nước, cửa, khóa, thiết bị vệ sinh hoạt động bình thường tại thời điểm bàn giao.
+5. Công năng sử dụng: dùng để ở cho cá nhân và gia đình; không sử dụng làm kho chứa hàng nguy hiểm, cơ sở sản xuất gây tiếng ồn hoặc mục đích vi phạm pháp luật.
 
-4. Diện tích của nhà ở:
+6. Trang thiết bị kèm theo: 02 máy điều hòa, 01 tủ lạnh, 01 máy giặt, 01 bếp điện, 01 bộ bàn ghế phòng khách, 02 giường ngủ, 02 tủ quần áo, rèm cửa, thiết bị vệ sinh và hệ thống chiếu sáng cơ bản. Danh mục chi tiết được lập tại Phụ lục 01 kèm theo.
 
-- Tổng diện tích sàn xây dựng nhà ở: 120 m2.
+Điều 2. Giá thuê, đặt cọc và các khoản phải trả
 
-- Tổng diện tích sử dụng đất: 80 m2, trong đó:
+1. Giá thuê nhà ở là 8.500.000 đồng/tháng (Bằng chữ: Tám triệu năm trăm nghìn đồng một tháng). Giá thuê chưa bao gồm tiền điện, nước, internet, truyền hình, vệ sinh, gửi xe, phí an ninh, phí quản lý, phí bảo trì phát sinh và các khoản phí dịch vụ khác theo thông báo của Bên cho thuê hoặc đơn vị quản lý.
 
-Sử dụng riêng: 80 m2.
+2. Bên thuê đặt cọc 17.000.000 đồng, tương đương 02 tháng tiền thuê, để bảo đảm việc giao kết và thực hiện toàn bộ nghĩa vụ trong Hợp đồng.
 
-Sử dụng chung (nếu có): 0 m2.
+3. Tiền đặt cọc chỉ được hoàn trả sau khi Bên thuê hoàn tất việc bàn giao nhà, thanh toán đủ mọi khoản tiền thuê, tiền điện, nước, phí dịch vụ, tiền phạt, tiền bồi thường và các chi phí phát sinh khác. Trường hợp các bên chưa thống nhất được khoản khấu trừ, Bên cho thuê có quyền tạm giữ toàn bộ tiền cọc cho đến khi hoàn tất việc đối chiếu.
 
-Mục đích sử dụng đất: Đất ở đô thị.
+4. Nếu Bên thuê chấm dứt hợp đồng trước thời hạn vì bất kỳ lý do nào, kể cả thay đổi nơi ở, thay đổi công việc, lý do gia đình hoặc lý do sức khỏe, Bên thuê mất toàn bộ tiền cọc và vẫn phải thanh toán tiền thuê của thời gian còn lại cho đến khi Bên cho thuê tìm được người thuê mới.
 
-5. Công năng sử dụng: Dùng để ở; không sử dụng làm kho chứa hàng nguy hiểm, cơ sở sản xuất gây tiếng ồn, kinh doanh trái pháp luật hoặc các mục đích khác không được Bên cho thuê chấp thuận bằng văn bản.
-
-6. Trang thiết bị kèm theo: 02 máy điều hòa, 01 tủ lạnh, 01 máy giặt, 01 bếp điện, 01 bộ bàn ghế phòng khách, 02 giường ngủ, 02 tủ quần áo, rèm cửa, thiết bị vệ sinh và hệ thống chiếu sáng cơ bản.
-
-Điều 2. Giá thuê nhà ở
-
-1. Giá thuê nhà ở là 8.500.000 đồng/tháng.
-
-(Việt Nam đồng/tháng). (Bằng chữ: Tám triệu năm trăm nghìn đồng một tháng).
-
-Giá thuê này đã bao gồm chi phí bảo trì cơ bản thuộc trách nhiệm của Bên cho thuê và các khoản thuế mà Bên cho thuê phải nộp cho Nhà nước theo quy định; chưa bao gồm tiền điện, nước, internet, truyền hình, vệ sinh, gửi xe và các dịch vụ phát sinh theo nhu cầu sử dụng của Bên thuê.
-
-2. Các chi phí sử dụng điện, nước, điện thoại và các dịch vụ khác do Bên thuê thanh toán cho bên cung cấp điện, nước, điện thoại và các cơ quan cung cấp dịch vụ khác.
-
-3. Các thỏa thuận khác (nếu có): Bên thuê đặt cọc 17.000.000 đồng, tương đương 02 tháng tiền thuê, để bảo đảm thực hiện hợp đồng. Tiền đặt cọc được hoàn trả khi kết thúc hợp đồng sau khi trừ các khoản còn phải thanh toán hoặc bồi thường nếu có.
+5. Bên cho thuê được quyền khấu trừ tiền cọc để xử lý mọi hư hỏng, hao hụt, vệ sinh, sơn sửa, khử mùi, thay khóa, kiểm tra điện nước, công nợ và các khoản phí khác mà Bên cho thuê cho là cần thiết để khôi phục nhà về tình trạng tốt nhất.
 
 Điều 3. Phương thức và thời hạn thanh toán
 
-1. Phương thức thanh toán: Thanh toán bằng tiền Việt Nam thông qua hình thức chuyển khoản qua tài khoản ngân hàng của Bên cho thuê hoặc bằng tiền mặt có ký nhận của hai bên theo quy định của pháp luật.
+1. Bên thuê thanh toán bằng tiền Việt Nam thông qua chuyển khoản vào tài khoản của Bên cho thuê hoặc bằng tiền mặt có ký nhận.
 
-2. Thời hạn thực hiện thanh toán: Bên thuê thanh toán tiền thuê hằng tháng chậm nhất vào ngày 05 của tháng thuê tương ứng.
+2. Tiền thuê nhà được thanh toán chậm nhất vào ngày 05 của tháng thuê tương ứng. Nếu ngày thanh toán rơi vào ngày nghỉ, ngày lễ hoặc ngày ngân hàng không làm việc, Bên thuê phải thanh toán trước ngày đó.
 
-3. Các thỏa thuận khác (nếu có): Trường hợp chậm thanh toán quá 05 ngày, Bên thuê phải trả lãi chậm thanh toán bằng 0,03%/ngày tính trên số tiền chậm trả, trừ trường hợp hai bên có thỏa thuận khác bằng văn bản.
+3. Nếu chậm thanh toán quá 03 ngày, Bên thuê phải trả lãi chậm thanh toán bằng 0,15%/ngày tính trên toàn bộ số tiền chậm trả. Nếu chậm thanh toán quá 07 ngày, Bên cho thuê có quyền khóa cửa, tạm ngừng cung cấp tiện ích, giữ tài sản trong nhà để bảo đảm nghĩa vụ thanh toán và đơn phương chấm dứt Hợp đồng mà không phải bồi thường.
 
-Điều 4. Thời hạn cho thuê, thời điểm giao, nhận nhà ở cho thuê và hồ sơ kèm theo
+4. Mọi khoản thanh toán của Bên thuê được ưu tiên cấn trừ theo thứ tự: tiền phạt, lãi chậm trả, chi phí xử lý vi phạm, phí dịch vụ, tiền điện nước, tiền thuê nhà, sau cùng mới đến tiền gốc còn lại.
 
-1. Thời hạn cho thuê nhà ở: 12 tháng, kể từ ngày 01 tháng 7 năm 2026 đến hết ngày 30 tháng 6 năm 2027.
+Điều 4. Thời hạn thuê, giao nhận nhà và gia hạn hợp đồng
 
-2. Thời điểm giao nhận nhà ở: Ngày 01 tháng 7 năm 2026.
+1. Thời hạn thuê nhà là 12 tháng, kể từ ngày 01/7/2026 đến hết ngày 30/6/2027.
 
-3. Hồ sơ kèm theo: Bản sao Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất; biên bản bàn giao nhà ở; danh mục trang thiết bị kèm theo; bản sao căn cước công dân của hai bên.
+2. Thời điểm giao nhận nhà: ngày 01/7/2026. Bên thuê xác nhận đã kiểm tra nhà và đồng ý nhận nhà theo hiện trạng thực tế tại thời điểm ký biên bản bàn giao.
 
-Điều 5. Sử dụng nhà ở thuê
+3. Khi hết hạn thuê, nếu Bên thuê tiếp tục ở quá 03 ngày mà hai bên chưa ký hợp đồng mới, Hợp đồng được tự động gia hạn thêm 06 tháng với giá thuê tăng 15% so với kỳ trước. Bên thuê được xem là đã đồng ý với mức giá và điều kiện gia hạn nếu không phản đối bằng văn bản trước ít nhất 60 ngày.
 
-1. Mục đích sử dụng nhà ở của bên thuê: Sử dụng để ở cho cá nhân và gia đình, không cho thuê lại nếu chưa có sự đồng ý bằng văn bản của Bên cho thuê.
+4. Trường hợp Bên cho thuê có nhu cầu lấy lại nhà để bán, sửa chữa, cho người thân ở hoặc sử dụng vào mục đích khác, Bên cho thuê được quyền chấm dứt Hợp đồng trước hạn bằng cách thông báo trước 07 ngày cho Bên thuê và không phải bồi thường, chỉ hoàn trả phần tiền thuê tương ứng với thời gian Bên thuê chưa sử dụng nếu Bên thuê đã thanh toán trước.
 
-2. Các hạn chế sử dụng nhà ở: Không tự ý sửa chữa, cơi nới, thay đổi kết cấu; không nuôi động vật gây ảnh hưởng vệ sinh, an toàn, tiếng ồn; không sử dụng nhà ở vào mục đích vi phạm pháp luật.
+Điều 5. Sử dụng nhà ở thuê và hạn chế sử dụng
 
-3. Đóng phí dịch vụ, phí quản lý vận hành: Bên thuê tự thanh toán toàn bộ chi phí điện, nước, internet, truyền hình, vệ sinh, gửi xe và các dịch vụ khác phát sinh trong quá trình sử dụng kể từ ngày nhận bàn giao nhà.
+1. Bên thuê chỉ được sử dụng nhà để ở cho tối đa 03 người đã đăng ký với Bên cho thuê. Mọi người ở thêm, khách lưu trú qua đêm, người thân ở tạm trên 02 ngày đều phải được Bên cho thuê chấp thuận trước bằng tin nhắn hoặc văn bản.
 
-4. Ban hành và tuân thủ nội quy, quy chế quản lý vận hành của khu nhà ở, dự án: Bên thuê cam kết tuân thủ quy định về an ninh trật tự, phòng cháy chữa cháy, vệ sinh môi trường và các quy định cư trú tại địa phương.
+2. Bên thuê không được cho thuê lại, chuyển nhượng quyền thuê, đặt cọc lại, dùng nhà làm địa chỉ đăng ký kinh doanh hoặc địa chỉ nhận hàng thường xuyên nếu chưa được Bên cho thuê đồng ý bằng văn bản.
 
-5. Các thỏa thuận khác (nếu có): Bên thuê có trách nhiệm thông báo ngay cho Bên cho thuê khi phát hiện hư hỏng lớn, rò rỉ điện nước, sự cố an toàn hoặc sự kiện có khả năng gây thiệt hại đến nhà ở.
+3. Bên thuê không được nuôi thú cưng, treo biển hiệu, cải tạo, khoan tường, thay đổi khóa, lắp đặt camera, lắp điều hòa, lắp thiết bị mạng hoặc thay đổi thiết bị điện nếu chưa được Bên cho thuê đồng ý.
 
-Điều 6. Quyền và nghĩa vụ của bên cho thuê
+4. Nếu vi phạm bất kỳ hạn chế nào tại Điều này, Bên thuê phải nộp phạt 5.000.000 đồng/lần vi phạm và Bên cho thuê có quyền chấm dứt Hợp đồng, khấu trừ tiền cọc và yêu cầu Bên thuê rời khỏi nhà trong vòng 48 giờ.
 
-1. Quyền của bên cho thuê (theo Điều 18 của Luật Kinh doanh bất động sản):
+Điều 6. Điện, nước, internet, phí dịch vụ và các khoản phí khác
 
-a) Yêu cầu bên thuê nhận nhà ở theo thời hạn đã thỏa thuận tại Điều 4 của Hợp đồng này;
+1. Tiền điện, nước, internet, vệ sinh, gửi xe, an ninh, quản lý và các chi phí phát sinh khác do Bên thuê thanh toán theo thông báo hằng tháng của Bên cho thuê hoặc đơn vị quản lý.
 
-b) Yêu cầu bên thuê thanh toán đủ tiền theo thời hạn và phương thức thỏa thuận tại Điều 3 của Hợp đồng này;
+2. Trong trường hợp không có hóa đơn riêng, Bên thuê đồng ý thanh toán theo mức khoán do Bên cho thuê thông báo. Mức khoán có thể được điều chỉnh theo biến động chi phí thực tế mà không cần ký phụ lục, miễn là Bên cho thuê thông báo trước bằng tin nhắn, email hoặc bảng thông báo.
 
-c) Yêu cầu bên thuê bảo quản, sử dụng nhà ở theo đúng hiện trạng đã liệt kê tại Điều 1 của Hợp đồng này;
+3. Bên thuê không được yêu cầu đối chiếu hóa đơn gốc nếu Bên cho thuê đã cung cấp bảng tổng hợp chi phí. Việc chậm thanh toán phí dịch vụ được xử lý như chậm thanh toán tiền thuê nhà.
 
-d) Yêu cầu bên thuê bồi thường thiệt hại hoặc sửa chữa phần hư hỏng do lỗi của bên thuê gây ra;
+4. Trường hợp có tranh chấp về chỉ số điện, nước hoặc phí dịch vụ, Bên thuê vẫn phải thanh toán trước toàn bộ số tiền theo thông báo của Bên cho thuê, sau đó hai bên sẽ đối chiếu sau.
 
-đ) Cải tạo, nâng cấp nhà ở cho thuê khi được bên thuê đồng ý nhưng không được gây ảnh hưởng cho bên thuê;
+Điều 7. Bảo quản, sửa chữa, bảo trì và bồi thường
 
-e) Đơn phương chấm dứt thực hiện hợp đồng theo quy định tại điểm g khoản 2 Điều 18 của Luật Kinh doanh bất động sản;
+1. Bên thuê có nghĩa vụ bảo quản nhà và toàn bộ tài sản kèm theo như tài sản của mình. Bên thuê chịu mọi chi phí sửa chữa, thay thế, bảo dưỡng phát sinh trong thời gian thuê, bao gồm cả hư hỏng do hao mòn tự nhiên, cũ hỏng theo thời gian, sự cố điện nước, thiết bị gia dụng và các hư hỏng chưa xác định được nguyên nhân.
 
-g) Yêu cầu bên thuê giao lại nhà ở khi hết thời hạn thuê;
+2. Nếu phát sinh hư hỏng, Bên thuê phải thông báo ngay cho Bên cho thuê và chỉ được tự sửa chữa khi có sự đồng ý. Nếu Bên thuê tự sửa chữa không có chấp thuận, Bên cho thuê có quyền yêu cầu thay mới toàn bộ bộ phận/tài sản liên quan.
 
-h) Các quyền khác do các bên thỏa thuận (nếu có): Kiểm tra hiện trạng nhà ở định kỳ 03 tháng/lần sau khi báo trước cho Bên thuê tối thiểu 24 giờ, trừ trường hợp khẩn cấp.
+3. Bên cho thuê được quyền chỉ định đơn vị sửa chữa và giá sửa chữa. Bên thuê thanh toán toàn bộ chi phí theo báo giá/phiếu thu do đơn vị sửa chữa hoặc Bên cho thuê cung cấp.
 
-2. Nghĩa vụ của Bên cho thuê (theo Điều 19 của Luật Kinh doanh bất động sản)
+4. Khi trả nhà, nếu nhà không đạt tình trạng “sạch, mới, không mùi, không vết bẩn, không dấu vết khoan đục, không hư hao so với thời điểm ban đầu” theo đánh giá của Bên cho thuê, Bên thuê phải chịu chi phí khôi phục và Bên cho thuê được khấu trừ trực tiếp vào tiền cọc.
 
-a) Giao nhà ở cho bên thuê theo thỏa thuận trong hợp đồng và hướng dẫn bên thuê sử dụng nhà ở theo đúng công năng, thiết kế tại Điều 1 của Hợp đồng này;
+Điều 8. Quyền kiểm tra nhà và xử lý trường hợp khẩn cấp
 
-b) Bảo đảm cho bên thuê sử dụng ổn định nhà ở trong thời hạn thuê;
+1. Bên cho thuê có quyền kiểm tra hiện trạng nhà định kỳ hoặc đột xuất khi cần thiết. Bên cho thuê chỉ cần thông báo trước cho Bên thuê bằng điện thoại/tin nhắn ít nhất 02 giờ, trừ trường hợp Bên cho thuê cho rằng có dấu hiệu mất an toàn, vi phạm hợp đồng hoặc cần xử lý sự cố.
 
-c) Bảo trì, sửa chữa nhà ở theo định kỳ hoặc theo thỏa thuận; nếu bên cho thuê không bảo trì, sửa chữa nhà ở mà gây thiệt hại cho bên thuê thì phải bồi thường;
+2. Trong trường hợp Bên thuê vắng mặt, không phản hồi hoặc không tạo điều kiện kiểm tra, Bên cho thuê có quyền mở cửa bằng chìa khóa dự phòng để kiểm tra, ghi hình hiện trạng, di chuyển tài sản trong phạm vi cần thiết và niêm phong khu vực có dấu hiệu vi phạm.
 
-d) Không được đơn phương chấm dứt hợp đồng khi bên thuê thực hiện đúng nghĩa vụ theo hợp đồng, trừ trường hợp được bên thuê đồng ý chấm dứt hợp đồng;
+3. Bên thuê đồng ý rằng hình ảnh, video kiểm tra nhà có thể được Bên cho thuê lưu giữ làm bằng chứng xử lý vi phạm, thu hồi nợ, khấu trừ tiền cọc hoặc phục vụ tranh chấp.
 
-đ) Bồi thường thiệt hại do lỗi của mình gây ra;
+Điều 9. Quyền và nghĩa vụ của Bên cho thuê
 
-e) Thực hiện nghĩa vụ tài chính với Nhà nước theo quy định của pháp luật;
+1. Giao nhà cho Bên thuê theo thỏa thuận và cung cấp các thông tin cần thiết về nhà ở.
 
-g) Các nghĩa vụ khác do hai bên thỏa thuận (nếu có): Hỗ trợ Bên thuê thực hiện thủ tục khai báo cư trú theo quy định; cung cấp thông tin cần thiết về nhà ở khi Bên thuê có yêu cầu hợp lý.
+2. Bảo đảm quyền sử dụng ổn định của Bên thuê trong thời hạn thuê, trừ các trường hợp Bên thuê vi phạm nghĩa vụ, Bên cho thuê cần lấy lại nhà, sửa chữa lớn, chuyển nhượng, thế chấp, cho tặng, hoặc có yêu cầu từ người thân/bên thứ ba có quyền lợi liên quan.
 
-Điều 7. Quyền và nghĩa vụ của bên thuê
+3. Có quyền yêu cầu Bên thuê thanh toán đủ, đúng hạn các khoản tiền và thực hiện đúng các nghĩa vụ trong Hợp đồng.
 
-1. Quyền của bên thuê (theo Điều 20 của Luật Kinh doanh bất động sản)
+4. Có quyền tạm giữ tiền cọc, tài sản, giấy tờ hoặc các khoản tiền khác của Bên thuê trong trường hợp Bên thuê còn nghĩa vụ chưa hoàn thành hoặc có tranh chấp chưa giải quyết xong.
 
-a) Yêu cầu bên cho thuê giao nhà ở theo đúng hiện trạng đã liệt kê tại Điều 1 của Hợp đồng này;
+5. Có quyền đơn phương chấm dứt Hợp đồng nếu Bên thuê vi phạm bất kỳ nghĩa vụ nào và không khắc phục trong thời hạn Bên cho thuê ấn định.
 
-b) Yêu cầu bên cho thuê cung cấp thông tin đầy đủ, trung thực về nhà ở;
+Điều 10. Quyền và nghĩa vụ của Bên thuê
 
-c) Được đổi nhà ở đang thuê với người thuê khác nếu được bên cho thuê đồng ý bằng văn bản;
+1. Nhận nhà và sử dụng nhà đúng mục đích, đúng số người, đúng quy định của Hợp đồng.
 
-d) Được cho thuê lại một phần hoặc toàn bộ nhà ở nếu có thỏa thuận trong hợp đồng hoặc được bên cho thuê đồng ý bằng văn bản;
+2. Thanh toán đầy đủ, đúng hạn tiền thuê, tiền điện nước, phí dịch vụ, tiền phạt, lãi chậm trả và các khoản chi phí khác.
 
-đ) Được tiếp tục thuê theo các điều kiện đã thỏa thuận với bên cho thuê trong trường hợp thay đổi chủ sở hữu;
+3. Không được tự ý giữ lại tiền thuê, tự cấn trừ tiền cọc hoặc từ chối thanh toán vì lý do đang khiếu nại/chưa đồng ý với khoản phí do Bên cho thuê thông báo.
 
-e) Yêu cầu bên cho thuê sửa chữa nhà ở trong trường hợp nhà ở bị hư hỏng không phải do lỗi của mình gây ra;
+4. Khi muốn chấm dứt Hợp đồng trước hạn, Bên thuê phải thông báo trước ít nhất 60 ngày bằng văn bản, mất toàn bộ tiền cọc và thanh toán thêm khoản phí chấm dứt trước hạn bằng 02 tháng tiền thuê.
 
-g) Yêu cầu bên cho thuê bồi thường thiệt hại do lỗi của bên cho thuê gây ra;
+5. Bên thuê phải tự bảo quản tài sản cá nhân; Bên cho thuê không chịu trách nhiệm đối với mất mát, hư hỏng tài sản cá nhân của Bên thuê trong mọi trường hợp, kể cả khi sự việc xảy ra trong khuôn viên nhà thuê, trừ khi có bản án/quyết định có hiệu lực của Tòa án xác định lỗi trực tiếp của Bên cho thuê.
 
-h) Đơn phương chấm dứt thực hiện hợp đồng theo quy định tại điểm g khoản 2 Điều 20 của Luật Kinh doanh bất động sản;
+Điều 11. Phạt vi phạm và bồi thường thiệt hại
 
-i) Các quyền khác do hai bên thỏa thuận (nếu có): Được đề nghị gia hạn hợp đồng trước khi hết hạn tối thiểu 30 ngày; được yêu cầu lập biên bản xác nhận khi bàn giao và hoàn trả nhà ở.
+1. Bên vi phạm bất kỳ nghĩa vụ nào trong Hợp đồng phải chịu phạt vi phạm bằng 02 tháng tiền thuê nhà cho mỗi hành vi vi phạm, đồng thời bồi thường toàn bộ thiệt hại thực tế, chi phí luật sư, chi phí đi lại, chi phí cơ hội, chi phí xử lý hồ sơ, chi phí thu hồi nhà và các chi phí khác phát sinh cho bên bị vi phạm.
 
-2. Nghĩa vụ của Bên thuê (theo Điều 21 của Luật Kinh doanh bất động sản)
+2. Bên thuê chậm bàn giao nhà khi Hợp đồng chấm dứt phải trả tiền chiếm giữ nhà bằng 500.000 đồng/ngày, ngoài tiền thuê tương ứng, phí dịch vụ, tiền phạt và bồi thường thiệt hại nếu có.
 
-a) Bảo quản, sử dụng nhà ở đúng công năng, thiết kế đã liệt kê tại Điều 1 và các thỏa thuận trong hợp đồng;
+3. Trường hợp Bên thuê bị chấm dứt Hợp đồng do vi phạm, Bên thuê mất toàn bộ tiền cọc, đồng thời phải trả phí dọn dẹp, sơn sửa, quảng cáo tìm khách thuê mới và khoản tiền tương đương 01 tháng tiền thuê để bù đắp thời gian trống nhà.
 
-b) Thanh toán đủ tiền thuê nhà ở theo thời hạn và phương thức thỏa thuận tại Điều 3 và Điều 4 của Hợp đồng này;
+4. Việc Bên cho thuê chấp nhận tiền thanh toán chậm hoặc chưa xử lý ngay hành vi vi phạm không được xem là từ bỏ quyền phạt, quyền chấm dứt hoặc quyền yêu cầu bồi thường về sau.
 
-c) Sử dụng nhà ở đúng mục đích và sửa chữa hư hỏng của nhà ở do lỗi của mình gây ra;
+Điều 12. Chấm dứt hợp đồng và xử lý hậu quả
 
-d) Trả nhà ở cho bên cho thuê theo đúng thỏa thuận trong hợp đồng;
+1. Hợp đồng chấm dứt trong các trường hợp: hết thời hạn thuê; hai bên thỏa thuận chấm dứt; một bên đơn phương chấm dứt theo Hợp đồng; nhà ở bị thu hồi, chuyển nhượng, sửa chữa lớn, thay đổi quy hoạch hoặc phát sinh sự kiện bất khả kháng.
 
-đ) Không được thay đổi, cải tạo, phá dỡ nhà ở nếu không có sự đồng ý bằng văn bản của bên cho thuê;
+2. Khi Hợp đồng chấm dứt, Bên thuê phải trả nhà, chìa khóa, thẻ từ, thiết bị và bàn giao toàn bộ hiện trạng trong vòng 24 giờ kể từ thời điểm chấm dứt, trừ khi Bên cho thuê đồng ý bằng văn bản về thời hạn khác.
 
-e) Bồi thường thiệt hại do lỗi của mình gây ra;
+3. Bên thuê chỉ được nhận lại tiền cọc sau khi Bên cho thuê hoàn tất kiểm tra nhà, đối chiếu công nợ, xác định chi phí sửa chữa, xác nhận không có khiếu nại từ hàng xóm/đơn vị quản lý và ký biên bản thanh lý. Hợp đồng không quy định thời hạn tối đa để Bên cho thuê hoàn tất các bước này.
 
-g) Các nghĩa vụ khác do hai bên thỏa thuận (nếu có): Giữ gìn vệ sinh, an ninh trật tự; không chuyển giao quyền thuê cho người khác nếu chưa được Bên cho thuê đồng ý bằng văn bản; chịu trách nhiệm về tài sản cá nhân của mình trong thời gian thuê.
+4. Nếu Bên thuê không có mặt để ký biên bản thanh lý, Bên cho thuê được quyền tự lập biên bản, mời một người làm chứng bất kỳ, chụp ảnh hiện trạng và căn cứ vào đó để quyết định mức khấu trừ tiền cọc.
 
-Điều 8. Trách nhiệm do vi phạm hợp đồng
+Điều 13. Sự kiện bất khả kháng và thay đổi hoàn cảnh
 
-1. Trách nhiệm của bên cho thuê khi vi phạm hợp đồng: Nếu Bên cho thuê chậm bàn giao nhà quá 05 ngày so với thời điểm đã thỏa thuận mà không do lỗi của Bên thuê hoặc sự kiện bất khả kháng, Bên cho thuê phải hoàn trả khoản tiền đã nhận và bồi thường chi phí hợp lý phát sinh cho Bên thuê, nếu có chứng từ hợp lệ.
+1. Sự kiện bất khả kháng bao gồm thiên tai, hỏa hoạn, chiến tranh, dịch bệnh, thay đổi chính sách, thay đổi quy hoạch, sửa chữa hạ tầng, yêu cầu của cơ quan nhà nước, thay đổi kế hoạch tài chính hoặc nhu cầu sử dụng nhà của Bên cho thuê.
 
-2. Trách nhiệm của bên thuê khi vi phạm hợp đồng: Nếu Bên thuê sử dụng nhà sai mục đích, tự ý sửa chữa, cho thuê lại trái thỏa thuận hoặc chậm thanh toán quá 15 ngày, Bên cho thuê có quyền yêu cầu khắc phục, phạt vi phạm và đơn phương chấm dứt hợp đồng theo quy định tại hợp đồng này.
+2. Khi xảy ra sự kiện nêu trên, Bên cho thuê có quyền tạm ngừng thực hiện Hợp đồng, yêu cầu Bên thuê di dời trong thời hạn phù hợp hoặc chấm dứt Hợp đồng trước thời hạn mà không phải chịu phạt/bồi thường.
 
-3. Các trường hợp bất khả kháng: Bên thuê hoặc Bên cho thuê không bị coi là vi phạm hợp đồng và không bị phạt hoặc không phải chịu trách nhiệm bồi thường thiệt hại nếu việc chậm thực hiện hoặc không thực hiện các nghĩa vụ được các bên thỏa thuận trong hợp đồng này do có sự kiện bất khả kháng như thiên tai, chiến tranh, sự thay đổi quy định pháp luật và các trường hợp khác mà không phải do lỗi của các Bên gây ra.
+3. Bên thuê không được viện dẫn khó khăn tài chính, mất việc, thay đổi nơi làm việc, bệnh tật cá nhân hoặc lý do gia đình để miễn, giảm tiền thuê, tiền phạt hoặc nghĩa vụ thanh toán, trừ khi Bên cho thuê đồng ý bằng văn bản.
 
-4. Các thỏa thuận khác (nếu có): Mọi thông báo vi phạm phải được lập bằng văn bản, tin nhắn, email hoặc hình thức khác có thể xác nhận được việc gửi và nhận giữa hai bên.
+Điều 14. Xử lý thông tin cá nhân và trao đổi dữ liệu
 
-Điều 9. Phạt vi phạm hợp đồng
+1. Bên thuê đồng ý cung cấp và cho phép Bên cho thuê thu thập, lưu trữ, sử dụng, sao chụp, chia sẻ thông tin cá nhân gồm họ tên, CCCD, địa chỉ, số điện thoại, tài khoản ngân hàng, hình ảnh, video, lịch sử thanh toán, thông tin cư trú và các thông tin khác liên quan đến việc thuê nhà.
 
-Do các bên thỏa thuận: Bên vi phạm nghĩa vụ thanh toán, bàn giao, sử dụng nhà sai mục đích hoặc đơn phương chấm dứt hợp đồng trái thỏa thuận phải chịu phạt vi phạm bằng 01 tháng tiền thuê nhà, đồng thời bồi thường toàn bộ thiệt hại thực tế, hợp lý phát sinh nếu có.
+2. Bên cho thuê được sử dụng thông tin cá nhân của Bên thuê để quản lý hợp đồng, thu tiền, nhắc nợ, xác minh cư trú, làm việc với đơn vị quản lý, môi giới, luật sư, tổ chức tín dụng, cơ quan nhà nước, đơn vị thu hồi công nợ hoặc bên thứ ba mà Bên cho thuê cho là cần thiết.
 
-Điều 10. Các trường hợp chấm dứt hợp đồng và các biện pháp xử lý
+3. Sự đồng ý của Bên thuê tại Điều này có hiệu lực trong toàn bộ thời hạn Hợp đồng và 05 năm sau khi Hợp đồng chấm dứt. Bên thuê không được rút lại sự đồng ý nếu còn bất kỳ nghĩa vụ thanh toán, tranh chấp hoặc vấn đề phát sinh nào chưa giải quyết xong.
 
-1. Các trường hợp chấm dứt hợp đồng:
+Điều 15. Thông báo và chứng cứ điện tử
 
-a) Hai bên đồng ý chấm dứt hợp đồng. Trong trường hợp này, hai bên lập văn bản thỏa thuận cụ thể các điều kiện và thời hạn chấm dứt hợp đồng;
+1. Mọi thông báo giữa hai bên có thể được thực hiện bằng văn bản, email, tin nhắn SMS, Zalo, cuộc gọi điện thoại, hình ảnh chụp màn hình hoặc bất kỳ hình thức điện tử nào có thể thể hiện nội dung thông báo.
 
-b) Bên thuê chậm thanh toán tiền thuê theo thỏa thuận tại Điều 3 của hợp đồng này;
+2. Thông báo được xem là đã nhận sau 02 giờ kể từ khi Bên cho thuê gửi tới số điện thoại/email/Zalo mà Bên thuê đã đăng ký, dù Bên thuê thực tế đã đọc hay chưa.
 
-c) Bên cho thuê chậm bàn giao nhà ở theo thỏa thuận tại Điều 4 của hợp đồng này;
+3. Tin nhắn, bản ghi âm, hình ảnh, video, email, sao kê, phiếu thu, bảng tính công nợ do Bên cho thuê lập hoặc lưu giữ được các bên thừa nhận là chứng cứ để xử lý vi phạm và giải quyết tranh chấp.
 
-d) Trong trường hợp bên bị tác động bởi sự kiện bất khả kháng không thể khắc phục được để tiếp tục thực hiện nghĩa vụ của mình trong thời hạn 30 ngày, kể từ ngày xảy ra sự kiện bất khả kháng và hai bên cũng không có thỏa thuận khác thì một trong hai bên có quyền đơn phương chấm dứt hợp đồng này và việc chấm dứt hợp đồng này không được coi là vi phạm hợp đồng.
+Điều 16. Giải quyết tranh chấp
 
-2. Việc xử lý hậu quả do chấm dứt hợp đồng theo quy định tại khoản 1 Điều này như: hoàn trả lại tiền thuê, tính lãi, các khoản phạt và bồi thường thiệt hại do hai bên thỏa thuận cụ thể trên cơ sở biên bản thanh lý hợp đồng và biên bản hoàn trả nhà ở.
+1. Trường hợp phát sinh tranh chấp, hai bên ưu tiên thương lượng trong thời hạn 05 ngày kể từ ngày một bên gửi thông báo tranh chấp.
 
-3. Các thỏa thuận khác (nếu có): Khi chấm dứt hợp đồng, Bên thuê phải hoàn trả nhà ở, chìa khóa, thiết bị kèm theo trong tình trạng sử dụng bình thường, trừ hao mòn tự nhiên; các khoản điện, nước, dịch vụ phải được thanh toán đầy đủ trước ngày bàn giao lại nhà.
+2. Nếu không thương lượng được, tranh chấp được giải quyết tại Tòa án nhân dân có thẩm quyền tại thành phố Huế.
 
-Điều 11. Giải quyết tranh chấp
+3. Bên thua kiện hoặc bên có nghĩa vụ thanh toán phải chịu toàn bộ án phí, lệ phí, chi phí luật sư, chi phí đi lại, chi phí sao chụp hồ sơ, chi phí định giá, chi phí giám định, chi phí thu hồi tài sản và các chi phí hợp lý khác của bên còn lại.
 
-Các bên có trách nhiệm thỏa thuận cụ thể cách thức, hình thức giải quyết tranh chấp về các nội dung của hợp đồng khi có tranh chấp phát sinh và lựa chọn Tòa án nhân dân có thẩm quyền tại thành phố Huế để giải quyết theo quy định pháp luật khi hai bên không tự thỏa thuận giải quyết được.
+Điều 17. Hiệu lực hợp đồng
 
-Điều 12. Hiệu lực của hợp đồng
+1. Hợp đồng có hiệu lực kể từ ngày 25 tháng 6 năm 2026.
 
-1. Hợp đồng này có hiệu lực kể từ ngày 25 tháng 6 năm 2026.
+2. Hợp đồng gồm 17 điều, được lập thành 04 bản có giá trị pháp lý như nhau; Bên thuê giữ 02 bản, Bên cho thuê giữ 02 bản.
 
-2. Hợp đồng này có 12 điều, với 06 trang, được lập thành 04 bản và có giá trị pháp lý như nhau, Bên thuê giữ 02 bản, Bên cho thuê giữ 02 bản để lưu trữ, làm thủ tục nộp thuế, phí, lệ phí theo quy định của pháp luật.
+3. Các phụ lục, biên bản bàn giao, danh mục tài sản, thông báo, tin nhắn và các sửa đổi, bổ sung được xem là bộ phận không tách rời của Hợp đồng.
 
-3. Kèm theo hợp đồng này các giấy tờ về nhà ở gồm: bản sao Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất; biên bản bàn giao; danh mục tài sản, trang thiết bị kèm theo.
+4. Trong quá trình thực hiện, nếu một điều khoản bị tuyên vô hiệu hoặc không thể thực hiện, các điều khoản còn lại vẫn có hiệu lực. Hai bên sẽ thay thế điều khoản đó bằng điều khoản khác có ý nghĩa gần nhất với mục tiêu ban đầu của Hợp đồng.
 
-Các phụ lục đính kèm hợp đồng này và các sửa đổi, bổ sung theo thỏa thuận của hai bên là nội dung không tách rời hợp đồng này và có hiệu lực thi hành đối với hai bên.
+5. Hai bên xác nhận đã đọc, hiểu, đồng ý toàn bộ nội dung Hợp đồng và tự nguyện ký tên dưới đây.
 
-4. Trong trường hợp các bên thỏa thuận thay đổi nội dung của hợp đồng này thì phải lập bằng văn bản có chữ ký của cả hai bên.
+PHỤ LỤC 01
 
-BÊN THUÊ (Ký, ghi rõ họ tên) TRẦN THỊ LAN | BÊN CHO THUÊ (Ký, ghi rõ họ tên) NGUYỄN VĂN MINH
+DANH MỤC TÀI SẢN, TRANG THIẾT BỊ KÈM THEO
+
+Phụ lục này là một phần không tách rời của Hợp đồng thuê nhà ở số 06/2026/HĐTN-DEMO.
+
+Bên thuê xác nhận đã kiểm tra và nhận đủ tài sản theo danh mục trên. Trừ khi có ghi chú khác bằng văn bản tại thời điểm bàn giao, mọi tài sản được mặc nhiên xem là hoạt động bình thường và Bên thuê chịu trách nhiệm hoàn trả theo tình trạng tương đương hoặc tốt hơn.
+
+Phụ lục này được hai bên xác nhận là căn cứ đối chiếu tình trạng tài sản khi bàn giao và khi hoàn trả nhà.
+
+BÊN THUÊ
+(Ký, ghi rõ họ tên)
+
+
+
+TRẦN THỊ LAN	BÊN CHO THUÊ
+(Ký, ghi rõ họ tên)
+
+
+
+NGUYỄN VĂN MINH
+
+STT	Tài sản	Số lượng	Hiện trạng	Ghi chú
+
+1	Máy điều hòa	02	Đang hoạt động	Bên thuê chịu chi phí vệ sinh, bảo trì, sửa chữa trong thời gian thuê.
+
+2	Tủ lạnh	01	Đang hoạt động	Nếu hỏng phải thay thế bằng thiết bị tương đương hoặc tốt hơn.
+
+3	Máy giặt	01	Đang hoạt động	Mọi lỗi phát sinh trong thời gian thuê do Bên thuê chịu.
+
+4	Bếp điện	01	Đang hoạt động	Không được thay đổi vị trí lắp đặt.
+
+5	Bàn ghế phòng khách	01 bộ	Đã qua sử dụng	Khi trả nhà phải bảo đảm không trầy xước, bong tróc vượt đánh giá của Bên cho thuê.
+
+6	Giường ngủ	02	Đã qua sử dụng	Bên thuê chịu chi phí vệ sinh, khử mùi, sửa chữa nếu Bên cho thuê yêu cầu.
+
+7	Tủ quần áo	02	Đã qua sử dụng	Bên thuê chịu trách nhiệm về bản lề, khóa, bề mặt tủ.
+
+8	Rèm cửa, thiết bị vệ sinh, hệ thống chiếu sáng	Theo hiện trạng	Đang sử dụng	Thiếu/hỏng/mất mát được khấu trừ vào tiền cọc theo báo giá của Bên cho thuê.
