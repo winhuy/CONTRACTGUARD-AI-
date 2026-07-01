@@ -377,6 +377,48 @@ REWRITE_SUGGESTION_PATTERNS = [
     (r"thong bao", REWRITE_SUGGESTIONS_BY_TOPIC["Thông báo vi phạm"]),
 ]
 
+SCORING_VERSION = "CG-RUBRIC-2026-06-30-v1"
+SCORING_BASE_SCORE = 96
+SCORING_MIN_SCORE = 18
+SCORING_SEVERITY_PENALTIES = {"RED": 18.0, "YELLOW": 7.0, "GREEN": -1.0}
+SCORING_SEVERITY_RANK = {"RED": 0, "YELLOW": 1, "GREEN": 2}
+SCORING_TOPIC_WEIGHTS = {
+    "Chủ thể hợp đồng": 1.2,
+    "Tư cách pháp lý chủ thể": 1.2,
+    "Người ký hợp đồng": 1.2,
+    "Giấy ủy quyền": 1.15,
+    "Đối tượng hợp đồng": 1.15,
+    "Tính hợp pháp đối tượng": 1.25,
+    "Giá trị và thanh toán": 1.1,
+    "Chậm thanh toán": 1.15,
+    "Phạt vi phạm và bồi thường": 1.25,
+    "Giới hạn trách nhiệm": 1.15,
+    "Đặt cọc và hoàn cọc": 1.2,
+    "Đơn phương chấm dứt": 1.25,
+    "Bảo mật dữ liệu cá nhân": 0.9,
+    "Quyền kiểm tra tài sản": 0.85,
+    "Giải quyết tranh chấp": 0.75,
+    "Ngôn ngữ dễ hiểu cho người ký": 0.65,
+}
+SCORING_TOPIC_PATTERNS = [
+    (r"chu the|tu cach", "Chủ thể hợp đồng"),
+    (r"nguoi ky|uy quyen|tham quyen", "Người ký hợp đồng"),
+    (r"doi tuong|hop phap doi tuong", "Đối tượng hợp đồng"),
+    (r"gia tri|thanh toan|ho so thanh toan|thoi han thanh toan", "Giá trị và thanh toán"),
+    (r"cham thanh toan|lai cham", "Chậm thanh toán"),
+    (r"dat coc|hoan coc", "Đặt cọc và hoàn cọc"),
+    (r"phat vi pham|boi thuong|thiet hai", "Phạt vi phạm và bồi thường"),
+    (r"gioi han trach nhiem", "Giới hạn trách nhiệm"),
+    (r"don phuong|cham dut", "Đơn phương chấm dứt"),
+    (r"kiem tra", "Quyền kiểm tra tài sản"),
+    (r"ban giao|nghiem thu", "Bàn giao và hồ sơ kèm theo"),
+    (r"sua chua|bao tri", "Sửa chữa và bảo trì"),
+    (r"bao mat|du lieu ca nhan|rieng tu", "Bảo mật dữ liệu cá nhân"),
+    (r"tranh chap|toa an|trong tai", "Giải quyết tranh chấp"),
+    (r"hieu luc|phu luc|sua doi", "Hiệu lực và sửa đổi hợp đồng"),
+    (r"ngon ngu|de hieu", "Ngôn ngữ dễ hiểu cho người ký"),
+]
+
 
 def compact(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
@@ -450,6 +492,152 @@ def enrich_findings_for_report(findings: list[dict[str, Any]]) -> None:
 
         if not compact(str(finding.get("cau_sua_bo_sung", ""))):
             finding["cau_sua_bo_sung"] = rewrite_suggestion_for_finding(finding)
+
+
+def normalize_scoring_topic(topic: str) -> str:
+    clean_topic = compact(topic)
+    if clean_topic in SCORING_TOPIC_WEIGHTS or clean_topic in CHECKLIST:
+        return clean_topic
+
+    folded = fold_vietnamese(clean_topic)
+    for pattern, normalized in SCORING_TOPIC_PATTERNS:
+        if re.search(pattern, folded):
+            return normalized
+    return clean_topic or "Hạng mục khác"
+
+
+def safe_severity(value: Any) -> str:
+    severity = str(value or "GREEN").upper()
+    return severity if severity in SCORING_SEVERITY_PENALTIES else "GREEN"
+
+
+def calculate_contract_score(findings: list[dict[str, Any]]) -> dict[str, Any]:
+    counts = {
+        "RED": sum(1 for item in findings if safe_severity(item.get("muc_do_rui_ro")) == "RED"),
+        "YELLOW": sum(1 for item in findings if safe_severity(item.get("muc_do_rui_ro")) == "YELLOW"),
+        "GREEN": sum(1 for item in findings if safe_severity(item.get("muc_do_rui_ro")) == "GREEN"),
+    }
+
+    strongest_by_topic: dict[str, dict[str, Any]] = {}
+    for finding in findings:
+        if not isinstance(finding, dict):
+            continue
+        severity = safe_severity(finding.get("muc_do_rui_ro"))
+        finding["muc_do_rui_ro"] = severity
+        topic = normalize_scoring_topic(str(finding.get("muc_ra_soat", "")))
+        finding["scoreCategory"] = topic
+
+        current = strongest_by_topic.get(topic)
+        if current is None or SCORING_SEVERITY_RANK[severity] < SCORING_SEVERITY_RANK[current["severity"]]:
+            strongest_by_topic[topic] = {"severity": severity, "finding": finding}
+
+    positive_impacts: list[dict[str, Any]] = []
+    green_credit = 0.0
+    for topic, item in strongest_by_topic.items():
+        severity = item["severity"]
+        finding = item["finding"]
+        weight = SCORING_TOPIC_WEIGHTS.get(topic, 1.0)
+        raw_impact = SCORING_SEVERITY_PENALTIES[severity] * weight
+
+        if severity == "GREEN":
+            green_credit += abs(raw_impact)
+            finding["scoreImpact"] = {
+                "category": topic,
+                "severity": severity,
+                "points": -round(abs(raw_impact), 1),
+                "weight": weight,
+                "counted": True,
+            }
+            continue
+
+        points = round(raw_impact, 1)
+        finding["scoreImpact"] = {
+            "category": topic,
+            "severity": severity,
+            "points": points,
+            "weight": weight,
+            "counted": True,
+        }
+        positive_impacts.append(
+            {
+                "category": topic,
+                "severity": severity,
+                "points": points,
+                "title": finding.get("muc_ra_soat", topic),
+                "reason": finding.get("ly_do_ra_soat") or finding.get("giai_thich_binh_dan", ""),
+            }
+        )
+
+    counted_ids = {id(item["finding"]) for item in strongest_by_topic.values()}
+    for finding in findings:
+        if id(finding) in counted_ids:
+            continue
+        topic = normalize_scoring_topic(str(finding.get("muc_ra_soat", "")))
+        finding["scoreCategory"] = topic
+        finding["scoreImpact"] = {
+            "category": topic,
+            "severity": safe_severity(finding.get("muc_do_rui_ro")),
+            "points": 0,
+            "weight": SCORING_TOPIC_WEIGHTS.get(topic, 1.0),
+            "counted": False,
+        }
+
+    penalty_points = round(sum(item["points"] for item in positive_impacts), 1)
+    green_credit = min(round(green_credit, 1), 4.0)
+    score = int(round(SCORING_BASE_SCORE - penalty_points + green_credit))
+    score = max(SCORING_MIN_SCORE, min(SCORING_BASE_SCORE, score))
+
+    positive_impacts.sort(key=lambda item: (-item["points"], SCORING_SEVERITY_RANK.get(item["severity"], 3), item["category"]))
+    red_topics = sum(1 for item in positive_impacts if item["severity"] == "RED")
+    yellow_topics = sum(1 for item in positive_impacts if item["severity"] == "YELLOW")
+    overall = "HIGH" if red_topics >= 2 or score < 62 else "MEDIUM" if red_topics or yellow_topics >= 2 or score < 80 else "LOW"
+    label = "Cần sửa trước khi ký" if overall == "HIGH" else "Có thể đàm phán thêm" if overall == "MEDIUM" else "Có thể xem xét ký"
+
+    if positive_impacts:
+        top_categories = ", ".join(item["category"] for item in positive_impacts[:3])
+        reason = f"Điểm được tính bằng rubric cố định; trừ {penalty_points:g} điểm cho các nhóm rủi ro chính: {top_categories}."
+    else:
+        reason = "Không có nhóm rủi ro Đỏ/Vàng đáng kể; điểm được giữ cao theo rubric cố định."
+
+    return {
+        "version": SCORING_VERSION,
+        "score": score,
+        "overallRisk": overall,
+        "readinessLabel": label,
+        "reason": reason,
+        "counts": counts,
+        "penaltyPoints": penalty_points,
+        "greenCredit": green_credit,
+        "categoryImpacts": positive_impacts[:6],
+        "coverage": {
+            "checked": len(CHECKLIST),
+            "flagged": len(findings),
+            "highImpact": counts["RED"] + counts["YELLOW"],
+            "countedCategories": len(strongest_by_topic),
+        },
+        "framework": {
+            "version": SCORING_VERSION,
+            "method": "Rubric cố định theo nhóm điều khoản: mỗi nhóm chỉ lấy rủi ro nặng nhất để tránh cùng một hợp đồng bị trừ điểm nhiều lần khi AI tách/ghép thẻ khác nhau.",
+            "baseScore": SCORING_BASE_SCORE,
+            "minScore": SCORING_MIN_SCORE,
+            "penaltyPoints": penalty_points,
+            "greenCredit": green_credit,
+            "categoryImpacts": positive_impacts[:6],
+        },
+    }
+
+
+def apply_scorecard_to_deep_analysis(deep: dict[str, Any], scorecard: dict[str, Any]) -> None:
+    readiness = deep.get("readiness")
+    if not isinstance(readiness, dict):
+        readiness = {}
+        deep["readiness"] = readiness
+
+    readiness["score"] = scorecard["score"]
+    readiness["label"] = scorecard["readinessLabel"]
+    readiness["reason"] = scorecard["reason"]
+    deep["coverage"] = scorecard["coverage"]
+    deep["scoringFramework"] = scorecard["framework"]
 
 
 def text_from_docx_node(node: ET.Element) -> str:
@@ -796,7 +984,7 @@ def extract_pdf_with_groq(path: Path) -> str:
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.1,
+            temperature=0,
             max_tokens=8192
         )
         return completion.choices[0].message.content
@@ -1222,9 +1410,14 @@ def merge_chunk_results(chunk_data_list: list[dict[str, Any]]) -> dict[str, Any]
     seen_priority_titles = set()
 
     for data in chunk_data_list:
-        if not data:
+        if not data or not isinstance(data, dict):
             continue
-        for f in data.get("findings", []):
+        findings_list = data.get("findings") or []
+        if not isinstance(findings_list, list):
+            findings_list = []
+        for f in findings_list:
+            if not f or not isinstance(f, dict):
+                continue
             quote = compact(f.get("van_ban_goc_highlight", ""))
             if quote and quote in seen_quotes:
                 continue
@@ -1232,30 +1425,51 @@ def merge_chunk_results(chunk_data_list: list[dict[str, Any]]) -> dict[str, Any]
                 seen_quotes.add(quote)
             merged_findings.append(f)
 
-        deep = data.get("deepAnalysis", {})
-        readiness = deep.get("readiness", {})
+        deep = data.get("deepAnalysis") or {}
+        if not isinstance(deep, dict):
+            deep = {}
+        readiness = deep.get("readiness") or {}
+        if not isinstance(readiness, dict):
+            readiness = {}
         if "score" in readiness:
             scores.append(readiness["score"])
 
-        exp = deep.get("financialExposure", {})
+        exp = deep.get("financialExposure") or {}
+        if not isinstance(exp, dict):
+            exp = {}
         max_rent = max(max_rent, exp.get("monthlyRent") or 0)
         max_deposit = max(max_deposit, exp.get("deposit") or 0)
         max_penalty = max(max_penalty, exp.get("possiblePenalty") or 0)
         max_exposure = max(max_exposure, exp.get("estimatedExposure") or 0)
 
-        for t in deep.get("timeline", []):
+        timeline_list = deep.get("timeline") or []
+        if not isinstance(timeline_list, list):
+            timeline_list = []
+        for t in timeline_list:
+            if not t or not isinstance(t, dict):
+                continue
             label = t.get("label", "").lower().strip()
             if label not in seen_timeline_labels:
                 seen_timeline_labels.add(label)
                 merged_timeline.append(t)
 
-        for m in deep.get("missingClauses", []):
+        missing_list = deep.get("missingClauses") or []
+        if not isinstance(missing_list, list):
+            missing_list = []
+        for m in missing_list:
+            if not m or not isinstance(m, dict):
+                continue
             title = m.get("title", "").lower().strip()
             if title not in seen_missing_titles:
                 seen_missing_titles.add(title)
                 merged_missing.append(m)
 
-        for p in deep.get("priorityActions", []):
+        priorities_list = deep.get("priorityActions") or []
+        if not isinstance(priorities_list, list):
+            priorities_list = []
+        for p in priorities_list:
+            if not p or not isinstance(p, dict):
+                continue
             title = p.get("title", "").lower().strip()
             if title not in seen_priority_titles:
                 seen_priority_titles.add(title)
@@ -1457,7 +1671,7 @@ Nội dung hợp đồng:
                 model = genai.GenerativeModel(GEMINI_MODEL)
                 response = model.generate_content(
                     prompt,
-                    generation_config={"response_mime_type": "application/json"}
+                    generation_config={"response_mime_type": "application/json", "temperature": 0}
                 )
                 response_text = response.text
             except Exception as e:
@@ -1476,7 +1690,7 @@ Nội dung hợp đồng:
                     model=GROQ_MODEL,
                     response_format={"type": "json_object"},
                     messages=[{"role": "user", "content": prompt}],
-                    temperature=0.2
+                    temperature=0
                 )
                 response_text = completion.choices[0].message.content
             except Exception as e:
@@ -1492,6 +1706,12 @@ Nội dung hợp đồng:
             continue
 
     if not chunk_results:
+        return None
+    if len(chunk_results) < len(chunks):
+        print(
+            f"AI chỉ phân tích được {len(chunk_results)}/{len(chunks)} phần. Bỏ kết quả partial và chuyển sang rule engine deterministic để tránh điểm dao động.",
+            file=sys.stderr,
+        )
         return None
     return merge_chunk_results(chunk_results)
 
@@ -1631,6 +1851,11 @@ def analyze_contract(text: str, filename: str, contract_type: str) -> dict[str, 
             readiness["score"] = score
             readiness["label"] = "Cần sửa trước khi ký" if counts["RED"] else "Có thể đàm phán thêm" if counts["YELLOW"] else "Có thể xem xét ký"
 
+        scorecard = calculate_contract_score(findings)
+        counts = scorecard["counts"]
+        score = scorecard["score"]
+        overall = scorecard["overallRisk"]
+        apply_scorecard_to_deep_analysis(deep, scorecard)
         enrich_findings_for_report(findings)
 
         return {
@@ -1959,14 +2184,12 @@ def analyze_contract(text: str, filename: str, contract_type: str) -> dict[str, 
             confidence=0.6,
         )
 
-    counts = {
-        "RED": sum(1 for item in findings if item["muc_do_rui_ro"] == "RED"),
-        "YELLOW": sum(1 for item in findings if item["muc_do_rui_ro"] == "YELLOW"),
-        "GREEN": sum(1 for item in findings if item["muc_do_rui_ro"] == "GREEN"),
-    }
-    score = max(18, min(96, 92 - counts["RED"] * 18 - counts["YELLOW"] * 7 + counts["GREEN"] * 2))
-    overall = "HIGH" if counts["RED"] >= 2 or score < 55 else "MEDIUM" if counts["RED"] or counts["YELLOW"] >= 2 else "LOW"
+    scorecard = calculate_contract_score(findings)
+    counts = scorecard["counts"]
+    score = scorecard["score"]
+    overall = scorecard["overallRisk"]
     deep_analysis = build_deep_analysis(text, findings, counts, score)
+    apply_scorecard_to_deep_analysis(deep_analysis, scorecard)
     enrich_findings_for_report(findings)
 
     return {

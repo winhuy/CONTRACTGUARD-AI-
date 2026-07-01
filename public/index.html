@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ContractGuard AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -163,6 +166,9 @@
               <p class="eyebrow">Risk report</p>
               <h2 id="riskLevel">Chưa có kết quả</h2>
               <p id="riskSummary">Báo cáo sẽ xuất hiện sau khi quét hợp đồng.</p>
+              <button class="ask-context-btn summary-chat-btn" type="button" data-chat-prompt="Tóm tắt các rủi ro chính và lý do hợp đồng bị chấm điểm như hiện tại">
+                Hỏi thêm
+              </button>
             </div>
           </section>
 
@@ -279,6 +285,7 @@
               <span class="pipeline-step">Map</span>
             </div>
 
+
             <section class="findings-list" id="findingsList">
               <div class="empty-state compact">
                 <strong>Chưa có thẻ hành động</strong>
@@ -309,6 +316,47 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ── Chat Widget (direct body child for reliable position:fixed) ── -->
+    <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Mở Chatbot" disabled>
+      <svg class="chat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </button>
+
+    <section class="report-chat" id="reportChat" aria-label="Chatbot hỏi đáp hợp đồng">
+      <div class="chat-head">
+        <div class="chat-head-info">
+          <div class="chat-head-avatar">🤖</div>
+          <div>
+            <p class="eyebrow"><span class="chat-head-online-dot"></span>ContractGuard AI</p>
+            <h2>Hỏi đáp hợp đồng</h2>
+          </div>
+        </div>
+        <div class="chat-head-actions">
+          <span class="chat-search-chip">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Web + hợp đồng
+          </span>
+          <button class="icon-btn chat-close-btn" id="chatCloseBtn" type="button" aria-label="Đóng chatbot">×</button>
+        </div>
+      </div>
+      <div class="chat-suggestions" aria-label="Câu hỏi gợi ý">
+        <button type="button" data-chat-prompt="Điều khoản nào cần sửa trước khi ký?">Cần sửa gì?</button>
+        <button type="button" data-chat-prompt="Tìm các căn cứ pháp lý liên quan đến tiền cọc">Luật tiền cọc</button>
+        <button type="button" data-chat-prompt="Vì sao hợp đồng bị trừ điểm?">Vì sao trừ điểm?</button>
+      </div>
+      <div class="chat-messages" id="chatMessages" aria-live="polite">
+        <div class="chat-message bot">
+          <span>Chatbot sẽ sẵn sàng sau khi có báo cáo phân tích.</span>
+        </div>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" type="search" placeholder="Hỏi về điều khoản, rủi ro hoặc căn cứ pháp lý..." autocomplete="off" />
+        <button class="primary-btn" id="chatSendBtn" type="submit" disabled>Hỏi</button>
+      </form>
+    </section>
+
     <script src="/app.js"></script>
   </body>
 </html>
